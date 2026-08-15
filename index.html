@@ -1,0 +1,2915 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="FXNZZ STORE - Jasa joki game aman, fast response dan terpercaya.">
+
+    <title>FXNZZ STORE | Jasa Joki Game</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --background: #08090d;
+            --surface: #101218;
+            --surface-light: #171922;
+            --border: rgba(255,255,255,0.08);
+            --text: #f5f5f5;
+            --muted: #9699a5;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --green: #22c55e;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(139,92,246,0.12),
+                    transparent 35%
+                ),
+                var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        button,
+        input,
+        textarea {
+            font-family: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 18px 7%;
+
+            background: rgba(8,9,13,0.85);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-light);
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .navbar nav a:hover {
+            color: white;
+        }
+
+        .nav-order {
+            background: white;
+            color: black;
+
+            border: none;
+            border-radius: 8px;
+
+            padding: 9px 18px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 620px;
+
+            padding: 100px 8%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 60px;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .status-badge {
+            display: inline-block;
+
+            padding: 7px 13px;
+
+            border: 1px solid rgba(34,197,94,0.3);
+
+            background: rgba(34,197,94,0.08);
+
+            color: #4ade80;
+
+            border-radius: 50px;
+
+            font-size: 12px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 7vw, 82px);
+
+            line-height: 0.95;
+
+            letter-spacing: -4px;
+        }
+
+        .hero h1 span {
+            display: block;
+
+            color: var(--accent-light);
+        }
+
+        .hero p {
+            color: var(--muted);
+
+            max-width: 550px;
+
+            margin: 30px 0;
+
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .primary-button,
+        .secondary-button {
+            padding: 13px 22px;
+
+            border-radius: 9px;
+
+            font-weight: bold;
+
+            border: none;
+        }
+
+        .primary-button {
+            background: white;
+            color: black;
+        }
+
+        .secondary-button {
+            background: var(--surface-light);
+
+            color: white;
+
+            border: 1px solid var(--border);
+        }
+
+
+        /* HERO CARD */
+
+        .hero-card {
+            width: 330px;
+
+            padding: 30px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #1c1929,
+                    #101116
+                );
+
+            border:
+                1px solid rgba(167,139,250,0.2);
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.5);
+        }
+
+        .hero-card-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 12px;
+
+            color: var(--muted);
+        }
+
+        .online {
+            color: #4ade80;
+        }
+
+        .hero-card-number {
+            font-size: 70px;
+
+            font-weight: 800;
+
+            margin-top: 60px;
+        }
+
+        .hero-card > p {
+            color: var(--accent-light);
+        }
+
+        .hero-mini-stats {
+            display: flex;
+
+            gap: 40px;
+
+            margin-top: 50px;
+        }
+
+        .hero-mini-stats div {
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        .hero-mini-stats span {
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           TRUST
+        ========================= */
+
+        .trust-section {
+            padding: 20px 8% 70px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .trust-card {
+            display: flex;
+
+            gap: 15px;
+
+            padding: 24px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+        }
+
+        .trust-icon {
+            min-width: 42px;
+
+            height: 42px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(139,92,246,0.12);
+
+            color: var(--accent-light);
+
+            font-weight: bold;
+        }
+
+        .trust-card h3 {
+            font-size: 15px;
+        }
+
+        .trust-card p {
+            color: var(--muted);
+
+            font-size: 12px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           STATISTICS
+        ========================= */
+
+        .statistics {
+            margin: 0 8% 80px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+
+            overflow: hidden;
+        }
+
+        .stat {
+            padding: 30px;
+
+            text-align: center;
+
+            border-right:
+                1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat strong {
+            display: block;
+
+            font-size: 28px;
+        }
+
+        .stat span {
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        .services-section,
+        .testimonial-section,
+        .comments-section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .section-title span {
+            color: var(--accent-light);
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+
+            margin: 8px 0;
+        }
+
+        .section-title p {
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           FILTER
+        ========================= */
+
+        .game-filter {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-bottom: 35px;
+        }
+
+        .filter-button {
+            padding: 10px 17px;
+
+            border-radius: 8px;
+
+            border: 1px solid var(--border);
+
+            background: var(--surface);
+
+            color: var(--muted);
+        }
+
+        .filter-button.active {
+            background: white;
+
+            color: black;
+        }
+
+
+        /* =========================
+           PACKAGE + ORDER
+        ========================= */
+
+        .content-layout {
+            display: grid;
+
+            grid-template-columns:
+                1fr 330px;
+
+            gap: 25px;
+
+            align-items: start;
+        }
+
+        .package-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+        .package-card {
+            padding: 25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--surface-light),
+                    var(--surface)
+                );
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 15px;
+
+            transition:
+                transform 0.2s,
+                border 0.2s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-4px);
+
+            border-color:
+                rgba(167,139,250,0.4);
+        }
+
+        .package-game {
+            color: var(--accent-light);
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            font-weight: bold;
+        }
+
+        .package-card h3 {
+            margin: 7px 0;
+        }
+
+        .package-card p {
+            color: var(--muted);
+
+            font-size: 13px;
+
+            min-height: 45px;
+        }
+
+        .price {
+            font-size: 21px;
+
+            font-weight: bold;
+
+            margin: 20px 0;
+        }
+
+        .package-card button {
+            width: 100%;
+
+            padding: 11px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: white;
+
+            color: black;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           ORDER PANEL
+        ========================= */
+
+        .order-panel {
+            position: sticky;
+
+            top: 100px;
+
+            padding: 23px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+        }
+
+        .order-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+        .order-header span {
+            color: var(--muted);
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+        }
+
+        .cart-count {
+            width: 28px;
+
+            height: 28px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: var(--accent);
+        }
+
+        .cart-container {
+            max-height: 330px;
+
+            overflow-y: auto;
+        }
+
+        .empty-cart {
+            text-align: center;
+
+            padding: 40px 10px;
+
+            color: var(--muted);
+        }
+
+        .empty-icon {
+            font-size: 35px;
+
+            margin-bottom: 10px;
+        }
+
+        .cart-item {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 10px;
+
+            padding: 13px 0;
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        .cart-item strong {
+            font-size: 13px;
+        }
+
+        .cart-item small {
+            color: var(--muted);
+        }
+
+        .cart-item button {
+            background: transparent;
+
+            border: none;
+
+            color: #f87171;
+        }
+
+        .order-total {
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 20px 0;
+
+            margin-top: 10px;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+        .order-total span {
+            color: var(--muted);
+        }
+
+        .order-total strong {
+            font-size: 20px;
+        }
+
+        .checkout-button {
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background: #25d366;
+
+            color: white;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           TESTIMONIAL
+        ========================= */
+
+        .testimonial-section {
+            background: #0b0c11;
+        }
+
+        .testimonial-layout {
+            display: grid;
+
+            grid-template-columns:
+                350px 1fr;
+
+            gap: 30px;
+        }
+
+        .testimonial-form {
+            padding: 25px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+        }
+
+        .form-description {
+            color: var(--muted);
+
+            font-size: 13px;
+
+            margin:
+                5px 0 20px;
+        }
+
+        .testimonial-form input,
+        .testimonial-form textarea,
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+
+            padding: 13px;
+
+            margin-bottom: 12px;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                var(--surface-light);
+
+            color: white;
+
+            border-radius: 8px;
+
+            outline: none;
+        }
+
+        .testimonial-form textarea,
+        .comment-form textarea {
+            min-height: 110px;
+
+            resize: vertical;
+        }
+
+        .rating-input {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin:
+                10px 0 15px;
+        }
+
+        .rating-input span {
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+        #star-input button {
+            background: none;
+
+            border: none;
+
+            color: #555;
+
+            font-size: 23px;
+        }
+
+        #star-input button.selected {
+            color: #facc15;
+        }
+
+        .upload-box {
+            display: block;
+
+            padding: 20px;
+
+            border:
+                1px dashed #444;
+
+            border-radius: 9px;
+
+            text-align: center;
+
+            color: var(--muted);
+
+            cursor: pointer;
+
+            font-size: 12px;
+        }
+
+        .upload-box input {
+            display: none;
+        }
+
+        .image-preview img {
+            width: 100%;
+
+            max-height: 200px;
+
+            object-fit: cover;
+
+            margin-top: 12px;
+
+            border-radius: 9px;
+        }
+
+        .submit-review,
+        .comment-form button {
+            width: 100%;
+
+            padding: 12px;
+
+            margin-top: 15px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: white;
+
+            color: black;
+
+            font-weight: bold;
+        }
+
+        .testimonial-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+        .testimonial-card {
+            background: var(--surface);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 15px;
+
+            overflow: hidden;
+        }
+
+        .testimonial-card img {
+            width: 100%;
+
+            height: 180px;
+
+            object-fit: cover;
+        }
+
+        .testimonial-content {
+            padding: 20px;
+        }
+
+        .testimonial-top {
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+        .testimonial-name {
+            font-weight: bold;
+        }
+
+        .stars {
+            color: #facc15;
+        }
+
+        .testimonial-content p {
+            color: var(--muted);
+
+            font-size: 13px;
+
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           COMMENTS
+        ========================= */
+
+        .comment-layout {
+            display: grid;
+
+            grid-template-columns:
+                330px 1fr;
+
+            gap: 30px;
+        }
+
+        .comment-form {
+            padding: 25px;
+
+            background: var(--surface);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 15px;
+        }
+
+        .comment-list {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        .comment-card {
+            padding: 20px;
+
+            background: var(--surface);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 12px;
+        }
+
+        .comment-card strong {
+            display: block;
+
+            margin-bottom: 5px;
+        }
+
+        .comment-card p {
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-section {
+            text-align: center;
+
+            padding:
+                100px 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #161222,
+                    #0b0c11
+                );
+        }
+
+        .contact-section h2 {
+            font-size: 42px;
+        }
+
+        .contact-section p {
+            color: var(--muted);
+
+            margin:
+                10px 0 25px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding:
+                40px 8%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+        footer p,
+        footer small {
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .navbar nav {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+
+                text-align: center;
+
+                padding-top: 70px;
+            }
+
+            .hero p {
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-card {
+                width: 100%;
+
+                max-width: 350px;
+            }
+
+            .trust-section {
+                grid-template-columns: 1fr;
+            }
+
+            .statistics {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .stat:nth-child(2) {
+                border-right: none;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .order-panel {
+                position: static;
+            }
+
+            .testimonial-layout,
+            .comment-layout {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .package-container,
+            .testimonial-list {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            footer {
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        FXNZZ<span>STORE</span>
+    </div>
+
+
+    <nav>
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#services">
+            Paket
+        </a>
+
+        <a href="#testimonials">
+            Testimoni
+        </a>
+
+        <a href="#contact">
+            Kontak
+        </a>
+
+    </nav>
+
+
+    <button
+        class="nav-order"
+        onclick="scrollToOrder()">
+
+        Order
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="status-badge">
+            ● OPEN ORDER
+        </div>
+
+
+        <h1>
+
+            JOKI GAME
+
+            <span>
+                CEPAT & AMAN
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            FXNZZ STORE menyediakan jasa joki game
+            dengan harga terjangkau, proses cepat,
+            dan pelayanan responsif.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <button
+                class="primary-button"
+                onclick="scrollToServices()">
+
+                Lihat Paket
+
+            </button>
+
+
+            <button
+                class="secondary-button"
+                onclick="scrollToTestimonials()">
+
+                Lihat Testimoni
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-card">
+
+        <div class="hero-card-top">
+
+            <span>
+                FXNZZ STORE
+            </span>
+
+            <span class="online">
+                ● ONLINE
+            </span>
+
+        </div>
+
+
+        <div class="hero-card-number">
+            24/7
+        </div>
+
+
+        <p>
+            Fast Response
+        </p>
+
+
+        <div class="hero-mini-stats">
+
+            <div>
+
+                <strong id="hero-orders">
+                    0
+                </strong>
+
+                <span>
+                    Orders
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong id="hero-testimonials">
+                    0
+                </strong>
+
+                <span>
+                    Testimoni
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TRUST
+========================= -->
+
+<section class="trust-section">
+
+    <div class="trust-card">
+
+        <div class="trust-icon">
+            ✓
+        </div>
+
+        <div>
+
+            <h3>
+                Joki Aman
+            </h3>
+
+            <p>
+                Akun ditangani dengan prosedur
+                yang terkontrol.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="trust-card">
+
+        <div class="trust-icon">
+            ⚡
+        </div>
+
+        <div>
+
+            <h3>
+                Fast Response
+            </h3>
+
+            <p>
+                Respon cepat untuk konsultasi
+                dan pemesanan.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="trust-card">
+
+        <div class="trust-icon">
+            ★
+        </div>
+
+        <div>
+
+            <h3>
+                Terpercaya
+            </h3>
+
+            <p>
+                Tersedia bukti hasil joki
+                dari pelanggan.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     STATISTICS
+========================= -->
+
+<section class="statistics">
+
+    <div class="stat">
+
+        <strong id="total-orders">
+            0
+        </strong>
+
+        <span>
+            Total Order
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong id="total-testimonials">
+            0
+        </strong>
+
+        <span>
+            Testimoni
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>
+            5.0
+        </strong>
+
+        <span>
+            Rating
+        </span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>
+            24/7
+        </strong>
+
+        <span>
+            Response
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services" class="services-section">
+
+    <div class="section-title">
+
+        <span>
+            OUR SERVICES
+        </span>
+
+        <h2>
+            Pilih Paket Joki
+        </h2>
+
+        <p>
+            Pilih game dan paket yang ingin
+            kamu pesan.
+        </p>
+
+    </div>
+
+
+    <div class="game-filter">
+
+        <button
+            class="filter-button active"
+            onclick="filterGame('all', this)">
+
+            Semua
+
+        </button>
+
+
+        <button
+            class="filter-button"
+            onclick="filterGame('zzz', this)">
+
+            Zenless Zone Zero
+
+        </button>
+
+
+        <button
+            class="filter-button"
+            onclick="filterGame('pgr', this)">
+
+            Punishing Gray Raven
+
+        </button>
+
+    </div>
+
+
+
+    <div class="content-layout">
+
+        <div class="packages-area">
+
+            <div
+                id="package-container"
+                class="package-container">
+
+            </div>
+
+        </div>
+
+
+
+        <aside
+            id="order"
+            class="order-panel">
+
+            <div class="order-header">
+
+                <div>
+
+                    <span>
+                        YOUR ORDER
+                    </span>
+
+                    <h3>
+                        Pesanan
+                    </h3>
+
+                </div>
+
+
+                <div
+                    id="cart-count"
+                    class="cart-count">
+
+                    0
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="cart-container"
+                class="cart-container">
+
+            </div>
+
+
+            <div class="order-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total-price">
+                    Rp0
+                </strong>
+
+            </div>
+
+
+            <button
+                class="checkout-button"
+                onclick="orderNow()">
+
+                Order via WhatsApp
+
+            </button>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     TESTIMONIALS
+========================= -->
+
+<section
+    id="testimonials"
+    class="testimonial-section">
+
+    <div class="section-title">
+
+        <span>
+            CUSTOMER PROOF
+        </span>
+
+        <h2>
+            Hasil Joki & Testimoni
+        </h2>
+
+        <p>
+            Pelanggan yang sudah selesai melakukan
+            order dapat mengirimkan bukti hasil joki.
+        </p>
+
+    </div>
+
+
+    <div class="testimonial-layout">
+
+
+        <div class="testimonial-form">
+
+            <h3>
+                Kirim Testimoni
+            </h3>
+
+
+            <p class="form-description">
+
+                Bagikan pengalaman dan screenshot
+                hasil joki kamu.
+
+            </p>
+
+
+            <input
+                type="text"
+                id="review-name"
+                placeholder="Nama / Username">
+
+
+            <textarea
+                id="review-comment"
+                placeholder="Tulis pengalaman kamu..."></textarea>
+
+
+            <div class="rating-input">
+
+                <span>
+                    Rating:
+                </span>
+
+
+                <div id="star-input">
+
+                    <button onclick="setRating(1)">
+                        ★
+                    </button>
+
+                    <button onclick="setRating(2)">
+                        ★
+                    </button>
+
+                    <button onclick="setRating(3)">
+                        ★
+                    </button>
+
+                    <button onclick="setRating(4)">
+                        ★
+                    </button>
+
+                    <button onclick="setRating(5)">
+                        ★
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <label class="upload-box">
+
+                <span>
+                    + Tambahkan Foto Hasil Joki
+                </span>
+
+
+                <input
+                    type="file"
+                    id="review-image"
+                    accept="image/*"
+                    onchange="previewImage(event)">
+
+            </label>
+
+
+            <div
+                id="image-preview"
+                class="image-preview">
+
+            </div>
+
+
+            <button
+                class="submit-review"
+                onclick="submitReview()">
+
+                Kirim Testimoni
+
+            </button>
+
+        </div>
+
+
+
+        <div
+            id="testimonial-list"
+            class="testimonial-list">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     COMMENTS
+========================= -->
+
+<section class="comments-section">
+
+    <div class="section-title">
+
+        <span>
+            COMMUNITY
+        </span>
+
+        <h2>
+            Komentar Pelanggan
+        </h2>
+
+    </div>
+
+
+    <div class="comment-layout">
+
+
+        <div class="comment-form">
+
+            <input
+                type="text"
+                id="comment-name"
+                placeholder="Nama / Username">
+
+
+            <textarea
+                id="comment-text"
+                placeholder="Tulis komentar..."></textarea>
+
+
+            <button
+                onclick="submitComment()">
+
+                Kirim Komentar
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="comment-list"
+            class="comment-list">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+    id="contact"
+    class="contact-section">
+
+    <h2>
+        Siap melakukan order?
+    </h2>
+
+
+    <p>
+        Hubungi FXNZZ STORE untuk informasi
+        dan pemesanan.
+    </p>
+
+
+    <button
+        class="primary-button"
+        onclick="contactWhatsApp()">
+
+        WhatsApp
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="logo">
+        FXNZZ<span>STORE</span>
+    </div>
+
+
+    <p>
+        Jasa Joki Game
+    </p>
+
+
+    <small>
+        © 2026 FXNZZ STORE
+    </small>
+
+</footer>
+
+
+
+<script>
+
+
+// ==========================================
+// DATA PAKET
+// ==========================================
+
+const packages = [
+
+    // ==========================
+    // ZENLESS ZONE ZERO
+    // ==========================
+
+    {
+        id: 1,
+        name: "Story + Quest",
+        game: "zzz",
+        description:
+            "Jasa menyelesaikan Story dan Quest.",
+        price: 6000
+    },
+
+    {
+        id: 2,
+        name: "Pull 10x",
+        game: "zzz",
+        description:
+            "Jasa melakukan 10 Pull.",
+        price: 8000
+    },
+
+    {
+        id: 3,
+        name: "Battle Trial",
+        game: "zzz",
+        description:
+            "Jasa menyelesaikan Battle Trial.",
+        price: 10000
+    },
+
+    {
+        id: 4,
+        name: "Shiyu Defense",
+        game: "zzz",
+        description:
+            "Jasa menyelesaikan Shiyu Defense.",
+        price: 6000
+    },
+
+    {
+        id: 5,
+        name: "Rawat Akun 2 Patch",
+        game: "zzz",
+        description:
+            "Jasa rawat akun selama 2 patch.",
+        price: 20000
+    },
+
+
+    // ==========================
+    // PUNISHING GRAY RAVEN
+    // ==========================
+
+    {
+        id: 6,
+        name: "Story + Quest",
+        game: "pgr",
+        description:
+            "Jasa menyelesaikan Story dan Quest.",
+        price: 6000
+    },
+
+    {
+        id: 7,
+        name: "Daily Mission",
+        game: "pgr",
+        description:
+            "Jasa menyelesaikan Daily Mission.",
+        price: 5000
+    },
+
+    {
+        id: 8,
+        name: "VIP 2 Minggu",
+        game: "pgr",
+        description:
+            "Jasa rawat akun VIP selama 2 minggu.",
+        price: 15000
+    },
+
+    {
+        id: 9,
+        name: "Stronghold 7 Stage",
+        game: "pgr",
+        description:
+            "Jasa menyelesaikan 7 Stage Stronghold.",
+        price: 8000
+    },
+
+    {
+        id: 10,
+        name: "Cursed Wave 40 Level",
+        game: "pgr",
+        description:
+            "Jasa menyelesaikan Cursed Wave hingga level 40.",
+        price: 20000
+    },
+
+    {
+        id: 11,
+        name: "Awakening Thundra 30 Level",
+        game: "pgr",
+        description:
+            "Jasa menyelesaikan Awakening Thundra hingga level 30.",
+        price: 7000
+    },
+
+    {
+        id: 12,
+        name: "Derived from Matrix 40 Level",
+        game: "pgr",
+        description:
+            "Jasa menyelesaikan Derived from Matrix hingga level 40.",
+        price: 20000
+    },
+
+    {
+        id: 13,
+        name: "Rawat Akun VIP 3 Patch",
+        game: "pgr",
+        description:
+            "Jasa rawat akun VIP selama 3 patch.",
+        price: 35000
+    }
+
+];
+
+
+// ==========================================
+// STATE
+// ==========================================
+
+let cart = [];
+
+let selectedRating = 0;
+
+let previewImageData = null;
+
+
+// ==========================================
+// FORMAT HARGA
+// ==========================================
+
+function formatPrice(price) {
+
+    return new Intl.NumberFormat(
+        "id-ID",
+        {
+            style: "currency",
+            currency: "IDR",
+            maximumFractionDigits: 0
+        }
+    ).format(price);
+
+}
+
+
+// ==========================================
+// DISPLAY PACKAGE
+// ==========================================
+
+function displayPackages(game = "all") {
+
+    const container =
+        document.getElementById(
+            "package-container"
+        );
+
+
+    container.innerHTML = "";
+
+
+    const filteredPackages =
+        game === "all"
+            ? packages
+            : packages.filter(
+                item => item.game === game
+            );
+
+
+    filteredPackages.forEach(item => {
+
+        const card =
+            document.createElement("div");
+
+
+        card.className =
+            "package-card";
+
+
+        const gameName =
+            item.game === "zzz"
+                ? "Zenless Zone Zero"
+                : "Punishing Gray Raven";
+
+
+        card.innerHTML = `
+
+            <span class="package-game">
+                ${gameName}
+            </span>
+
+            <h3>
+                ${item.name}
+            </h3>
+
+            <p>
+                ${item.description}
+            </p>
+
+            <div class="price">
+                ${formatPrice(item.price)}
+            </div>
+
+            <button
+                onclick="addToCart(${item.id})">
+
+                Tambah Pesanan
+
+            </button>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+// ==========================================
+// FILTER
+// ==========================================
+
+function filterGame(game, button) {
+
+    document
+        .querySelectorAll(".filter-button")
+        .forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+
+    button.classList.add("active");
+
+
+    displayPackages(game);
+
+}
+
+
+// ==========================================
+// CART
+// ==========================================
+
+function addToCart(id) {
+
+    const item =
+        packages.find(
+            packageItem =>
+                packageItem.id === id
+        );
+
+
+    if (!item) {
+
+        return;
+
+    }
+
+
+    cart.push(item);
+
+
+    updateCart();
+
+}
+
+
+function removeFromCart(index) {
+
+    cart.splice(index, 1);
+
+
+    updateCart();
+
+}
+
+
+function updateCart() {
+
+    const container =
+        document.getElementById(
+            "cart-container"
+        );
+
+
+    const totalElement =
+        document.getElementById(
+            "total-price"
+        );
+
+
+    const countElement =
+        document.getElementById(
+            "cart-count"
+        );
+
+
+    countElement.innerText =
+        cart.length;
+
+
+    container.innerHTML = "";
+
+
+    if (cart.length === 0) {
+
+        container.innerHTML = `
+
+            <div class="empty-cart">
+
+                <div class="empty-icon">
+                    🛒
+                </div>
+
+                <p>
+                    Belum ada paket.
+                </p>
+
+                <small>
+                    Pilih paket untuk memulai.
+                </small>
+
+            </div>
+
+        `;
+
+
+        totalElement.innerText =
+            "Rp0";
+
+        return;
+
+    }
+
+
+    let total = 0;
+
+
+    cart.forEach((item, index) => {
+
+        total += item.price;
+
+
+        const cartItem =
+            document.createElement("div");
+
+
+        cartItem.className =
+            "cart-item";
+
+
+        cartItem.innerHTML = `
+
+            <div>
+
+                <strong>
+                    ${item.name}
+                </strong>
+
+                <br>
+
+                <small>
+                    ${formatPrice(item.price)}
+                </small>
+
+            </div>
+
+            <button
+                onclick="removeFromCart(${index})">
+
+                Hapus
+
+            </button>
+
+        `;
+
+
+        container.appendChild(cartItem);
+
+    });
+
+
+    totalElement.innerText =
+        formatPrice(total);
+
+}
+
+
+// ==========================================
+// ORDER
+// ==========================================
+
+function orderNow() {
+
+    if (cart.length === 0) {
+
+        alert(
+            "Pilih paket terlebih dahulu."
+        );
+
+        return;
+
+    }
+
+
+    let message =
+        "Halo FXNZZ STORE! Saya ingin order:%0A%0A";
+
+
+    let total = 0;
+
+
+    cart.forEach((item, index) => {
+
+        message +=
+            `${index + 1}. ${item.name}%0A`;
+
+        message +=
+            `Harga: ${formatPrice(item.price)}%0A%0A`;
+
+        total += item.price;
+
+    });
+
+
+    message +=
+        `Total: ${formatPrice(total)}%0A%0A`;
+
+    message +=
+        "Mohon info proses selanjutnya.";
+
+
+    // ==========================
+    // GANTI NOMOR WHATSAPP
+    // ==========================
+
+    const phone =
+        "628XXXXXXXXXX";
+
+
+    window.open(
+
+        `https://wa.me/${phone}?text=${message}`,
+
+        "_blank"
+
+    );
+
+
+    increaseOrderCount();
+
+}
+
+
+// ==========================================
+// ORDER COUNT
+// ==========================================
+
+function increaseOrderCount() {
+
+    let orders =
+        Number(
+            localStorage.getItem(
+                "fxnzzOrders"
+            )
+        ) || 0;
+
+
+    orders++;
+
+
+    localStorage.setItem(
+        "fxnzzOrders",
+        orders
+    );
+
+
+    updateStatistics();
+
+}
+
+
+function updateStatistics() {
+
+    const orders =
+        Number(
+            localStorage.getItem(
+                "fxnzzOrders"
+            )
+        ) || 0;
+
+
+    const testimonials =
+        JSON.parse(
+            localStorage.getItem(
+                "fxnzzTestimonials"
+            )
+        ) || [];
+
+
+    document.getElementById(
+        "total-orders"
+    ).innerText = orders;
+
+
+    document.getElementById(
+        "hero-orders"
+    ).innerText = orders;
+
+
+    document.getElementById(
+        "total-testimonials"
+    ).innerText =
+        testimonials.length;
+
+
+    document.getElementById(
+        "hero-testimonials"
+    ).innerText =
+        testimonials.length;
+
+}
+
+
+// ==========================================
+// RATING
+// ==========================================
+
+function setRating(rating) {
+
+    selectedRating = rating;
+
+
+    const stars =
+        document.querySelectorAll(
+            "#star-input button"
+        );
+
+
+    stars.forEach(
+        (star, index) => {
+
+            if (index < rating) {
+
+                star.classList.add(
+                    "selected"
+                );
+
+            } else {
+
+                star.classList.remove(
+                    "selected"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+// ==========================================
+// IMAGE PREVIEW
+// ==========================================
+
+function previewImage(event) {
+
+    const file =
+        event.target.files[0];
+
+
+    if (!file) {
+
+        return;
+
+    }
+
+
+    const reader =
+        new FileReader();
+
+
+    reader.onload =
+        function(e) {
+
+            previewImageData =
+                e.target.result;
+
+
+            document.getElementById(
+                "image-preview"
+            ).innerHTML = `
+
+                <img
+                    src="${previewImageData}"
+                    alt="Preview hasil joki">
+
+            `;
+
+        };
+
+
+    reader.readAsDataURL(file);
+
+}
+
+
+// ==========================================
+// SUBMIT TESTIMONIAL
+// ==========================================
+
+function submitReview() {
+
+    const name =
+        document.getElementById(
+            "review-name"
+        ).value.trim();
+
+
+    const comment =
+        document.getElementById(
+            "review-comment"
+        ).value.trim();
+
+
+    if (!name) {
+
+        alert(
+            "Masukkan nama atau username."
+        );
+
+        return;
+
+    }
+
+
+    if (!comment) {
+
+        alert(
+            "Tulis pengalaman terlebih dahulu."
+        );
+
+        return;
+
+    }
+
+
+    if (selectedRating === 0) {
+
+        alert(
+            "Berikan rating terlebih dahulu."
+        );
+
+        return;
+
+    }
+
+
+    const testimonial = {
+
+        name: name,
+
+        comment: comment,
+
+        rating: selectedRating,
+
+        image: previewImageData,
+
+        date:
+            new Date()
+                .toLocaleDateString(
+                    "id-ID"
+                )
+
+    };
+
+
+    const testimonials =
+        JSON.parse(
+            localStorage.getItem(
+                "fxnzzTestimonials"
+            )
+        ) || [];
+
+
+    testimonials.unshift(
+        testimonial
+    );
+
+
+    localStorage.setItem(
+
+        "fxnzzTestimonials",
+
+        JSON.stringify(
+            testimonials
+        )
+
+    );
+
+
+    alert(
+        "Testimoni berhasil ditambahkan."
+    );
+
+
+    document.getElementById(
+        "review-name"
+    ).value = "";
+
+
+    document.getElementById(
+        "review-comment"
+    ).value = "";
+
+
+    document.getElementById(
+        "review-image"
+    ).value = "";
+
+
+    document.getElementById(
+        "image-preview"
+    ).innerHTML = "";
+
+
+    selectedRating = 0;
+
+    previewImageData = null;
+
+
+    setRating(0);
+
+
+    displayTestimonials();
+
+    updateStatistics();
+
+}
+
+
+// ==========================================
+// DISPLAY TESTIMONIAL
+// ==========================================
+
+function displayTestimonials() {
+
+    const container =
+        document.getElementById(
+            "testimonial-list"
+        );
+
+
+    const testimonials =
+        JSON.parse(
+            localStorage.getItem(
+                "fxnzzTestimonials"
+            )
+        ) || [];
+
+
+    container.innerHTML = "";
+
+
+    if (testimonials.length === 0) {
+
+        container.innerHTML = `
+
+            <div class="empty-cart">
+
+                <p>
+                    Belum ada testimoni.
+                </p>
+
+                <small>
+                    Jadilah pelanggan pertama
+                    yang memberikan testimoni.
+                </small>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    testimonials.forEach(item => {
+
+        const card =
+            document.createElement(
+                "div"
+            );
+
+
+        card.className =
+            "testimonial-card";
+
+
+        let stars = "";
+
+
+        for (
+            let i = 0;
+            i < item.rating;
+            i++
+        ) {
+
+            stars += "★";
+
+        }
+
+
+        const imageHTML =
+            item.image
+                ? `
+                    <img
+                        src="${item.image}"
+                        alt="Hasil joki">
+                  `
+                : "";
+
+
+        card.innerHTML = `
+
+            ${imageHTML}
+
+            <div class="testimonial-content">
+
+                <div class="testimonial-top">
+
+                    <span class="testimonial-name">
+                        ${item.name}
+                    </span>
+
+                    <span class="stars">
+                        ${stars}
+                    </span>
+
+                </div>
+
+
+                <p>
+                    "${item.comment}"
+                </p>
+
+
+                <small>
+                    ${item.date}
+                </small>
+
+            </div>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+// ==========================================
+// COMMENTS
+// ==========================================
+
+function submitComment() {
+
+    const name =
+        document.getElementById(
+            "comment-name"
+        ).value.trim();
+
+
+    const text =
+        document.getElementById(
+            "comment-text"
+        ).value.trim();
+
+
+    if (!name || !text) {
+
+        alert(
+            "Isi nama dan komentar terlebih dahulu."
+        );
+
+        return;
+
+    }
+
+
+    const comment = {
+
+        name: name,
+
+        text: text,
+
+        date:
+            new Date()
+                .toLocaleDateString(
+                    "id-ID"
+                )
+
+    };
+
+
+    const comments =
+        JSON.parse(
+            localStorage.getItem(
+                "fxnzzComments"
+            )
+        ) || [];
+
+
+    comments.unshift(
+        comment
+    );
+
+
+    localStorage.setItem(
+
+        "fxnzzComments",
+
+        JSON.stringify(
+            comments
+        )
+
+    );
+
+
+    document.getElementById(
+        "comment-name"
+    ).value = "";
+
+
+    document.getElementById(
+        "comment-text"
+    ).value = "";
+
+
+    displayComments();
+
+}
+
+
+function displayComments() {
+
+    const container =
+        document.getElementById(
+            "comment-list"
+        );
+
+
+    const comments =
+        JSON.parse(
+            localStorage.getItem(
+                "fxnzzComments"
+            )
+        ) || [];
+
+
+    container.innerHTML = "";
+
+
+    if (comments.length === 0) {
+
+        container.innerHTML = `
+
+            <div class="empty-cart">
+
+                <p>
+                    Belum ada komentar.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    comments.forEach(item => {
+
+        const card =
+            document.createElement(
+                "div"
+            );
+
+
+        card.className =
+            "comment-card";
+
+
+        card.innerHTML = `
+
+            <strong>
+                ${item.name}
+            </strong>
+
+            <p>
+                ${item.text}
+            </p>
+
+            <small>
+                ${item.date}
+            </small>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+// ==========================================
+// NAVIGATION
+// ==========================================
+
+function scrollToServices() {
+
+    document
+        .getElementById("services")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+function scrollToOrder() {
+
+    document
+        .getElementById("order")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+function scrollToTestimonials() {
+
+    document
+        .getElementById("testimonials")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+// ==========================================
+// WHATSAPP
+// ==========================================
+
+function contactWhatsApp() {
+
+    // GANTI NOMOR WHATSAPP
+    const phone =
+        "6285850654348";
+
+
+    window.open(
+
+        `https://wa.me/${phone}`,
+
+        "_blank"
+
+    );
+
+}
+
+
+// ==========================================
+// INITIALIZE
+// ==========================================
+
+displayPackages();
+
+displayTestimonials();
+
+displayComments();
+
+updateCart();
+
+updateStatistics();
+
+</script>
+
+
+</body>
+</html>
