@@ -1,2915 +1,823 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="FXNZZ STORE - Jasa joki game aman, fast response dan terpercaya.">
-
-    <title>FXNZZ STORE | Jasa Joki Game</title>
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --background: #08090d;
-            --surface: #101218;
-            --surface-light: #171922;
-            --border: rgba(255,255,255,0.08);
-            --text: #f5f5f5;
-            --muted: #9699a5;
-            --accent: #8b5cf6;
-            --accent-light: #a78bfa;
-            --green: #22c55e;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background:
-                radial-gradient(
-                    circle at top right,
-                    rgba(139,92,246,0.12),
-                    transparent 35%
-                ),
-                var(--background);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        button,
-        input,
-        textarea {
-            font-family: inherit;
-        }
-
-        button {
-            cursor: pointer;
-        }
-
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 18px 7%;
-
-            background: rgba(8,9,13,0.85);
-            backdrop-filter: blur(15px);
-
-            border-bottom: 1px solid var(--border);
-        }
-
-        .logo {
-            font-size: 21px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            color: var(--accent-light);
-        }
-
-        .navbar nav {
-            display: flex;
-            gap: 30px;
-        }
-
-        .navbar nav a {
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.2s;
-        }
-
-        .navbar nav a:hover {
-            color: white;
-        }
-
-        .nav-order {
-            background: white;
-            color: black;
-
-            border: none;
-            border-radius: 8px;
-
-            padding: 9px 18px;
-
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 620px;
-
-            padding: 100px 8%;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 60px;
-        }
-
-        .hero-content {
-            max-width: 650px;
-        }
-
-        .status-badge {
-            display: inline-block;
-
-            padding: 7px 13px;
-
-            border: 1px solid rgba(34,197,94,0.3);
-
-            background: rgba(34,197,94,0.08);
-
-            color: #4ade80;
-
-            border-radius: 50px;
-
-            font-size: 12px;
-
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            font-size: clamp(45px, 7vw, 82px);
-
-            line-height: 0.95;
-
-            letter-spacing: -4px;
-        }
-
-        .hero h1 span {
-            display: block;
-
-            color: var(--accent-light);
-        }
-
-        .hero p {
-            color: var(--muted);
-
-            max-width: 550px;
-
-            margin: 30px 0;
-
-            font-size: 17px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 12px;
-        }
-
-        .primary-button,
-        .secondary-button {
-            padding: 13px 22px;
-
-            border-radius: 9px;
-
-            font-weight: bold;
-
-            border: none;
-        }
-
-        .primary-button {
-            background: white;
-            color: black;
-        }
-
-        .secondary-button {
-            background: var(--surface-light);
-
-            color: white;
-
-            border: 1px solid var(--border);
-        }
-
-
-        /* HERO CARD */
-
-        .hero-card {
-            width: 330px;
-
-            padding: 30px;
-
-            border-radius: 22px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #1c1929,
-                    #101116
-                );
-
-            border:
-                1px solid rgba(167,139,250,0.2);
-
-            box-shadow:
-                0 30px 80px rgba(0,0,0,0.5);
-        }
-
-        .hero-card-top {
-            display: flex;
-
-            justify-content: space-between;
-
-            font-size: 12px;
-
-            color: var(--muted);
-        }
-
-        .online {
-            color: #4ade80;
-        }
-
-        .hero-card-number {
-            font-size: 70px;
-
-            font-weight: 800;
-
-            margin-top: 60px;
-        }
-
-        .hero-card > p {
-            color: var(--accent-light);
-        }
-
-        .hero-mini-stats {
-            display: flex;
-
-            gap: 40px;
-
-            margin-top: 50px;
-        }
-
-        .hero-mini-stats div {
-            display: flex;
-
-            flex-direction: column;
-        }
-
-        .hero-mini-stats span {
-            color: var(--muted);
-
-            font-size: 12px;
-        }
-
-
-        /* =========================
-           TRUST
-        ========================= */
-
-        .trust-section {
-            padding: 20px 8% 70px;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 15px;
-        }
-
-        .trust-card {
-            display: flex;
-
-            gap: 15px;
-
-            padding: 24px;
-
-            background: var(--surface);
-
-            border: 1px solid var(--border);
-
-            border-radius: 15px;
-        }
-
-        .trust-icon {
-            min-width: 42px;
-
-            height: 42px;
-
-            display: grid;
-
-            place-items: center;
-
-            border-radius: 10px;
-
-            background:
-                rgba(139,92,246,0.12);
-
-            color: var(--accent-light);
-
-            font-weight: bold;
-        }
-
-        .trust-card h3 {
-            font-size: 15px;
-        }
-
-        .trust-card p {
-            color: var(--muted);
-
-            font-size: 12px;
-
-            margin-top: 5px;
-        }
-
-
-        /* =========================
-           STATISTICS
-        ========================= */
-
-        .statistics {
-            margin: 0 8% 80px;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            background: var(--surface);
-
-            border: 1px solid var(--border);
-
-            border-radius: 16px;
-
-            overflow: hidden;
-        }
-
-        .stat {
-            padding: 30px;
-
-            text-align: center;
-
-            border-right:
-                1px solid var(--border);
-        }
-
-        .stat:last-child {
-            border-right: none;
-        }
-
-        .stat strong {
-            display: block;
-
-            font-size: 28px;
-        }
-
-        .stat span {
-            color: var(--muted);
-
-            font-size: 12px;
-        }
-
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
-        .services-section,
-        .testimonial-section,
-        .comments-section {
-            padding: 90px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-
-            margin-bottom: 40px;
-        }
-
-        .section-title span {
-            color: var(--accent-light);
-
-            font-size: 11px;
-
-            font-weight: bold;
-
-            letter-spacing: 2px;
-        }
-
-        .section-title h2 {
-            font-size: 38px;
-
-            margin: 8px 0;
-        }
-
-        .section-title p {
-            color: var(--muted);
-        }
-
-
-        /* =========================
-           FILTER
-        ========================= */
-
-        .game-filter {
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-
-            margin-bottom: 35px;
-        }
-
-        .filter-button {
-            padding: 10px 17px;
-
-            border-radius: 8px;
-
-            border: 1px solid var(--border);
-
-            background: var(--surface);
-
-            color: var(--muted);
-        }
-
-        .filter-button.active {
-            background: white;
-
-            color: black;
-        }
-
-
-        /* =========================
-           PACKAGE + ORDER
-        ========================= */
-
-        .content-layout {
-            display: grid;
-
-            grid-template-columns:
-                1fr 330px;
-
-            gap: 25px;
-
-            align-items: start;
-        }
-
-        .package-container {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 15px;
-        }
-
-        .package-card {
-            padding: 25px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    var(--surface-light),
-                    var(--surface)
-                );
-
-            border:
-                1px solid var(--border);
-
-            border-radius: 15px;
-
-            transition:
-                transform 0.2s,
-                border 0.2s;
-        }
-
-        .package-card:hover {
-            transform: translateY(-4px);
-
-            border-color:
-                rgba(167,139,250,0.4);
-        }
-
-        .package-game {
-            color: var(--accent-light);
-
-            font-size: 11px;
-
-            text-transform: uppercase;
-
-            font-weight: bold;
-        }
-
-        .package-card h3 {
-            margin: 7px 0;
-        }
-
-        .package-card p {
-            color: var(--muted);
-
-            font-size: 13px;
-
-            min-height: 45px;
-        }
-
-        .price {
-            font-size: 21px;
-
-            font-weight: bold;
-
-            margin: 20px 0;
-        }
-
-        .package-card button {
-            width: 100%;
-
-            padding: 11px;
-
-            border: none;
-
-            border-radius: 8px;
-
-            background: white;
-
-            color: black;
-
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           ORDER PANEL
-        ========================= */
-
-        .order-panel {
-            position: sticky;
-
-            top: 100px;
-
-            padding: 23px;
-
-            background: var(--surface);
-
-            border: 1px solid var(--border);
-
-            border-radius: 16px;
-        }
-
-        .order-header {
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            margin-bottom: 20px;
-        }
-
-        .order-header span {
-            color: var(--muted);
-
-            font-size: 10px;
-
-            letter-spacing: 2px;
-        }
-
-        .cart-count {
-            width: 28px;
-
-            height: 28px;
-
-            display: grid;
-
-            place-items: center;
-
-            border-radius: 50%;
-
-            background: var(--accent);
-        }
-
-        .cart-container {
-            max-height: 330px;
-
-            overflow-y: auto;
-        }
-
-        .empty-cart {
-            text-align: center;
-
-            padding: 40px 10px;
-
-            color: var(--muted);
-        }
-
-        .empty-icon {
-            font-size: 35px;
-
-            margin-bottom: 10px;
-        }
-
-        .cart-item {
-            display: flex;
-
-            justify-content: space-between;
-
-            gap: 10px;
-
-            padding: 13px 0;
-
-            border-bottom:
-                1px solid var(--border);
-        }
-
-        .cart-item strong {
-            font-size: 13px;
-        }
-
-        .cart-item small {
-            color: var(--muted);
-        }
-
-        .cart-item button {
-            background: transparent;
-
-            border: none;
-
-            color: #f87171;
-        }
-
-        .order-total {
-            display: flex;
-
-            justify-content: space-between;
-
-            padding: 20px 0;
-
-            margin-top: 10px;
-
-            border-top:
-                1px solid var(--border);
-        }
-
-        .order-total span {
-            color: var(--muted);
-        }
-
-        .order-total strong {
-            font-size: 20px;
-        }
-
-        .checkout-button {
-            width: 100%;
-
-            padding: 14px;
-
-            border: none;
-
-            border-radius: 9px;
-
-            background: #25d366;
-
-            color: white;
-
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           TESTIMONIAL
-        ========================= */
-
-        .testimonial-section {
-            background: #0b0c11;
-        }
-
-        .testimonial-layout {
-            display: grid;
-
-            grid-template-columns:
-                350px 1fr;
-
-            gap: 30px;
-        }
-
-        .testimonial-form {
-            padding: 25px;
-
-            background: var(--surface);
-
-            border: 1px solid var(--border);
-
-            border-radius: 15px;
-        }
-
-        .form-description {
-            color: var(--muted);
-
-            font-size: 13px;
-
-            margin:
-                5px 0 20px;
-        }
-
-        .testimonial-form input,
-        .testimonial-form textarea,
-        .comment-form input,
-        .comment-form textarea {
-            width: 100%;
-
-            padding: 13px;
-
-            margin-bottom: 12px;
-
-            border:
-                1px solid var(--border);
-
-            background:
-                var(--surface-light);
-
-            color: white;
-
-            border-radius: 8px;
-
-            outline: none;
-        }
-
-        .testimonial-form textarea,
-        .comment-form textarea {
-            min-height: 110px;
-
-            resize: vertical;
-        }
-
-        .rating-input {
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            margin:
-                10px 0 15px;
-        }
-
-        .rating-input span {
-            color: var(--muted);
-
-            font-size: 13px;
-        }
-
-        #star-input button {
-            background: none;
-
-            border: none;
-
-            color: #555;
-
-            font-size: 23px;
-        }
-
-        #star-input button.selected {
-            color: #facc15;
-        }
-
-        .upload-box {
-            display: block;
-
-            padding: 20px;
-
-            border:
-                1px dashed #444;
-
-            border-radius: 9px;
-
-            text-align: center;
-
-            color: var(--muted);
-
-            cursor: pointer;
-
-            font-size: 12px;
-        }
-
-        .upload-box input {
-            display: none;
-        }
-
-        .image-preview img {
-            width: 100%;
-
-            max-height: 200px;
-
-            object-fit: cover;
-
-            margin-top: 12px;
-
-            border-radius: 9px;
-        }
-
-        .submit-review,
-        .comment-form button {
-            width: 100%;
-
-            padding: 12px;
-
-            margin-top: 15px;
-
-            border: none;
-
-            border-radius: 8px;
-
-            background: white;
-
-            color: black;
-
-            font-weight: bold;
-        }
-
-        .testimonial-list {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 15px;
-        }
-
-        .testimonial-card {
-            background: var(--surface);
-
-            border:
-                1px solid var(--border);
-
-            border-radius: 15px;
-
-            overflow: hidden;
-        }
-
-        .testimonial-card img {
-            width: 100%;
-
-            height: 180px;
-
-            object-fit: cover;
-        }
-
-        .testimonial-content {
-            padding: 20px;
-        }
-
-        .testimonial-top {
-            display: flex;
-
-            justify-content: space-between;
-        }
-
-        .testimonial-name {
-            font-weight: bold;
-        }
-
-        .stars {
-            color: #facc15;
-        }
-
-        .testimonial-content p {
-            color: var(--muted);
-
-            font-size: 13px;
-
-            margin-top: 10px;
-        }
-
-
-        /* =========================
-           COMMENTS
-        ========================= */
-
-        .comment-layout {
-            display: grid;
-
-            grid-template-columns:
-                330px 1fr;
-
-            gap: 30px;
-        }
-
-        .comment-form {
-            padding: 25px;
-
-            background: var(--surface);
-
-            border:
-                1px solid var(--border);
-
-            border-radius: 15px;
-        }
-
-        .comment-list {
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 10px;
-        }
-
-        .comment-card {
-            padding: 20px;
-
-            background: var(--surface);
-
-            border:
-                1px solid var(--border);
-
-            border-radius: 12px;
-        }
-
-        .comment-card strong {
-            display: block;
-
-            margin-bottom: 5px;
-        }
-
-        .comment-card p {
-            color: var(--muted);
-
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact-section {
-            text-align: center;
-
-            padding:
-                100px 20px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #161222,
-                    #0b0c11
-                );
-        }
-
-        .contact-section h2 {
-            font-size: 42px;
-        }
-
-        .contact-section p {
-            color: var(--muted);
-
-            margin:
-                10px 0 25px;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            padding:
-                40px 8%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            border-top:
-                1px solid var(--border);
-        }
-
-        footer p,
-        footer small {
-            color: var(--muted);
-
-            font-size: 12px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 850px) {
-
-            .navbar nav {
-                display: none;
-            }
-
-            .hero {
-                flex-direction: column;
-
-                text-align: center;
-
-                padding-top: 70px;
-            }
-
-            .hero p {
-                margin-left: auto;
-
-                margin-right: auto;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .hero-card {
-                width: 100%;
-
-                max-width: 350px;
-            }
-
-            .trust-section {
-                grid-template-columns: 1fr;
-            }
-
-            .statistics {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .stat:nth-child(2) {
-                border-right: none;
-            }
-
-            .content-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .order-panel {
-                position: static;
-            }
-
-            .testimonial-layout,
-            .comment-layout {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-
-        @media (max-width: 550px) {
-
-            .package-container,
-            .testimonial-list {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-
-            .section-title h2 {
-                font-size: 30px;
-            }
-
-            footer {
-                flex-direction: column;
-
-                gap: 10px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08090d">
+<title>FXNZZ STORE — Joki Game</title>
+
+<style>
+:root{
+  --bg:#08090d;
+  --bg2:#0d0f15;
+  --card:rgba(17,18,24,.88);
+  --card2:#11131b;
+  --line:rgba(255,255,255,.09);
+  --muted:#9698a6;
+  --text:#fff;
+  --red:#ff315d;
+  --red2:#ff5276;
+  --green:#45e69a;
+  --yellow:#ffd35a;
+  --shadow:0 18px 50px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(255,49,93,.10),transparent 28%),
+    radial-gradient(circle at 85% 30%,rgba(255,49,93,.06),transparent 25%),
+    linear-gradient(180deg,#08090d,#0a0b10 50%,#08090d);
+  color:var(--text);
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;inset:0;z-index:-5;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1px);
+  background-size:34px 34px;
+  opacity:.12;
+  animation:drift 18s linear infinite;
+}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.container{width:min(1100px,92%);margin:auto}
+section{scroll-margin-top:82px}
+.hidden{display:none!important}
+
+.navbar{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(8,9,13,.78);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  width:min(1100px,92%);margin:auto;min-height:64px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.logo{font-size:20px;font-weight:900;letter-spacing:1px}
+.logo span{color:var(--red)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{
+  padding:9px 12px;border-radius:8px;color:#aaa;
+  transition:.2s;
+}
+.nav-links a:hover,.nav-links a.active{color:#fff;background:rgba(255,255,255,.07)}
+.nav-order{
+  background:var(--red)!important;color:#fff!important;
+  box-shadow:0 0 20px rgba(255,49,93,.18);
+}
+.menu-btn{display:none;background:transparent;color:#fff;border:1px solid var(--line);border-radius:9px;padding:8px 11px}
+.cart{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.07);border:1px solid var(--line);
+  padding:8px 12px;border-radius:10px;transition:.2s;
+}
+.cart.pop{animation:cartPop .28s ease}
+
+.hero{
+  min-height:78vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:70px 20px 55px;position:relative;
+}
+.hero::after{
+  content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+  background:rgba(255,49,93,.11);filter:blur(80px);z-index:-1;
+}
+.hero-content{max-width:850px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 11px;border:1px solid rgba(255,49,93,.3);
+  background:rgba(255,49,93,.07);border-radius:999px;
+  color:#ff91a6;font-size:12px;font-weight:700;margin-bottom:18px;
+}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+.hero h1{
+  font-size:clamp(45px,9vw,86px);letter-spacing:3px;margin-bottom:18px;
+  text-shadow:0 0 25px rgba(255,49,93,.10);
+}
+.hero h1 span{color:var(--red)}
+.hero p{max-width:700px;margin:auto;color:#c2c2ca;line-height:1.7;font-size:15px}
+.hero-buttons{display:flex;justify-content:center;gap:10px;margin-top:25px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  color:#fff;padding:12px 19px;border-radius:10px;
+  background:rgba(255,255,255,.07);border:1px solid var(--line);
+  backdrop-filter:blur(8px);transition:.2s;position:relative;overflow:hidden;
+}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.13)}
+.btn.primary{background:var(--red);border-color:var(--red)}
+.btn:active{transform:scale(.97)}
+
+.section{margin-bottom:60px}
+.section-title{margin-bottom:20px}
+.section-title h2{font-size:28px}
+.section-title p{color:var(--muted);margin-top:5px;font-size:14px}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.trust-card,.stat-card,.comment-card,.faq-item,.contact-card,.coming{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:18px;backdrop-filter:blur(10px);box-shadow:var(--shadow);
+}
+.trust-card,.stat-card,.package,.social a,.contact-card,.comment-card{
+  transition:transform .22s,border-color .22s,background .22s,box-shadow .22s;
+}
+.trust-card:hover,.stat-card:hover,.package:hover,.social a:hover,.contact-card:hover,.comment-card:hover{
+  transform:translateY(-4px);border-color:rgba(255,49,93,.38);
+}
+.trust-card h3{margin-bottom:7px}.trust-card p{color:var(--muted);font-size:13px;line-height:1.5}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat-card{text-align:center}
+.stat-value{font-size:26px;font-weight:900;color:#fff}
+.stat-label{font-size:12px;color:var(--muted);margin-top:5px}
+
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.filter{
+  color:#aaa;background:#111218;border:1px solid #292a32;
+  padding:10px 17px;border-radius:9px;transition:.2s;
+}
+.filter:hover{color:#fff;transform:translateY(-2px)}
+.filter.active{color:#fff;background:var(--red);border-color:var(--red)}
+
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:18px}
+.search{
+  width:100%;padding:11px 13px;border-radius:10px;
+  border:1px solid var(--line);background:#0e1016;color:#fff;outline:none;
+}
+.search:focus{border-color:rgba(255,49,93,.55);box-shadow:0 0 0 3px rgba(255,49,93,.08)}
+
+.package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.package{
+  background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px;
+  opacity:0;transform:translateY(15px);position:relative;overflow:hidden;
+}
+.package.show{opacity:1;transform:translateY(0)}
+.package::before{
+  content:"";position:absolute;inset:-1px;background:linear-gradient(120deg,transparent 30%,rgba(255,49,93,.12),transparent 70%);
+  transform:translateX(-120%);transition:.55s;pointer-events:none;
+}
+.package:hover::before{transform:translateX(120%)}
+.package h3{font-size:14px;line-height:1.4;margin-bottom:9px}
+.category{font-size:10px;color:#888b99;text-transform:uppercase;letter-spacing:.7px;margin-bottom:8px}
+.price{color:var(--red2);font-size:17px;font-weight:bold;margin-bottom:12px}
+.badges{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px}
+.badge{font-size:9px;padding:4px 6px;border-radius:999px;background:rgba(255,255,255,.07);color:#bbb}
+.badge.red{background:rgba(255,49,93,.14);color:#ff8aa1}
+.badge.gold{background:rgba(255,211,90,.12);color:#ffd35a}
+.package-actions{display:grid;grid-template-columns:1fr auto;gap:7px}
+.order-btn,.detail-btn{
+  border:none;padding:9px;border-radius:8px;transition:.2s
+}
+.order-btn{background:var(--red);color:#fff;font-weight:bold}
+.detail-btn{background:rgba(255,255,255,.07);color:#ddd;border:1px solid var(--line)}
+.order-btn:hover,.detail-btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.order-btn:active,.detail-btn:active{transform:scale(.97)}
+
+.progress-wrap{margin-top:11px}
+.progress-label{display:flex;justify-content:space-between;font-size:10px;color:#858793;margin-bottom:5px}
+.progress{height:5px;background:#242630;border-radius:99px;overflow:hidden}
+.progress span{display:block;height:100%;width:70%;background:linear-gradient(90deg,var(--red),#ff7791);animation:progressGlow 1.6s ease-in-out infinite alternate}
+
+.social{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.social a{text-align:center;padding:14px;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:10px}
+.social small{display:block;color:#888;margin-top:4px}
+
+.payment{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.payment-item{padding:13px 20px;background:#111218;border:1px solid #292a32;border-radius:10px;font-weight:bold}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact-card h3{margin-bottom:8px}.contact-card p{color:var(--muted);line-height:1.6;font-size:13px}
+.copy-box{display:flex;gap:8px;margin-top:12px}
+.copy-box input{flex:1;background:#090a0f;border:1px solid var(--line);color:#fff;border-radius:8px;padding:9px}
+.copy-box button{background:rgba(255,255,255,.07);border:1px solid var(--line);color:#fff;border-radius:8px;padding:0 12px}
+
+.faq{display:grid;gap:8px}
+.faq-item{padding:0;overflow:hidden}
+.faq-q{width:100%;background:transparent;color:#fff;border:0;text-align:left;padding:16px;font-weight:bold;display:flex;justify-content:space-between}
+.faq-a{max-height:0;overflow:hidden;color:var(--muted);font-size:13px;line-height:1.6;padding:0 16px;transition:max-height .3s,padding .3s}
+.faq-item.open .faq-a{max-height:150px;padding:0 16px 16px}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+
+.testimonial-layout{display:grid;grid-template-columns:360px 1fr;gap:14px}
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.form-card h3{margin-bottom:13px}
+.field{margin-bottom:10px}
+.field label{display:block;color:#aaa;font-size:12px;margin-bottom:5px}
+.field input,.field textarea,.field select{
+  width:100%;background:#0c0e13;color:#fff;border:1px solid var(--line);
+  border-radius:8px;padding:10px;outline:none;
+}
+.field textarea{min-height:90px;resize:vertical}
+.rating-input{display:flex;gap:3px;flex-direction:row-reverse;justify-content:flex-end}
+.rating-input input{display:none}
+.rating-input label{font-size:23px;color:#444;cursor:pointer}
+.rating-input input:checked~label,.rating-input label:hover,.rating-input label:hover~label{color:#ffd35a}
+.photo-preview{margin-top:8px;border:1px dashed var(--line);border-radius:8px;min-height:70px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;overflow:hidden}
+.photo-preview img{width:100%;max-height:170px;object-fit:cover}
+.testimonials{display:grid;gap:10px}
+.comment-card .top{display:flex;justify-content:space-between;gap:10px}
+.stars{color:#ffd35a;letter-spacing:1px}
+.comment-card p{color:#c4c5cc;font-size:13px;line-height:1.6;margin-top:9px}
+.comment-meta{color:#777;font-size:10px;margin-top:10px}
+
+.comment-form{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin-bottom:12px}
+.comment-form input{background:#0c0e13;color:#fff;border:1px solid var(--line);border-radius:8px;padding:10px}
+.comment-list{display:grid;gap:8px}
+
+.coming{text-align:center;color:#aaa;line-height:1.8}
+
+.promo{
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:14px 16px;border:1px solid rgba(255,49,93,.24);
+  background:rgba(255,49,93,.06);border-radius:12px;margin-bottom:16px;
+}
+.countdown{font-weight:900;color:#ff8aa1;white-space:nowrap}
+
+.modal{
+  position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);
+  z-index:2000;display:none;align-items:center;justify-content:center;padding:18px;
+}
+.modal.open{display:flex}
+.modal-box{
+  width:min(520px,100%);background:#101219;border:1px solid var(--line);
+  border-radius:16px;padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.5);
+  animation:modalIn .22s ease;
+}
+.modal-head{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.modal-close{background:transparent;color:#aaa;border:0;font-size:24px}
+.modal-body{color:#aaa;line-height:1.7;font-size:13px;margin:15px 0}
+.confirm-actions{display:flex;gap:8px;justify-content:flex-end}
+
+.toast{
+  position:fixed;right:18px;bottom:18px;z-index:3000;
+  background:#151821;border:1px solid var(--line);color:#fff;
+  padding:11px 14px;border-radius:10px;box-shadow:var(--shadow);
+  opacity:0;transform:translateY(15px);pointer-events:none;transition:.25s;
+  max-width:320px;font-size:13px;
+}
+.toast.show{opacity:1;transform:translateY(0)}
+
+.cart-panel{
+  position:fixed;right:18px;top:75px;width:min(390px,calc(100% - 36px));
+  background:#101219;border:1px solid var(--line);border-radius:15px;z-index:1500;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);display:none;overflow:hidden;
+}
+.cart-panel.open{display:block;animation:modalIn .2s ease}
+.cart-head{padding:15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.cart-items{max-height:350px;overflow:auto;padding:10px}
+.cart-item{padding:10px;border:1px solid var(--line);border-radius:9px;margin-bottom:7px}
+.cart-item .row{display:flex;justify-content:space-between;gap:8px}
+.qty{display:flex;align-items:center;gap:7px;margin-top:8px}
+.qty button{width:26px;height:26px;border-radius:6px;border:1px solid var(--line);background:#191b23;color:#fff}
+.remove{margin-left:auto;background:transparent;border:0;color:#ff708c}
+.cart-foot{padding:14px;border-top:1px solid var(--line)}
+.total{display:flex;justify-content:space-between;font-weight:bold;margin-bottom:10px}
+.full{width:100%}
+
+.back-top{
+  position:fixed;right:18px;bottom:72px;width:40px;height:40px;border-radius:50%;
+  border:1px solid var(--line);background:#14161e;color:#fff;display:none;z-index:900
+}
+.back-top.show{display:block}
+
+.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.35);transform:scale(0);animation:ripple .5s linear;pointer-events:none}
+
+.reveal{opacity:0;transform:translateY(22px);transition:.65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.loading{
+  display:flex;justify-content:center;align-items:center;padding:35px;color:#777
+}
+.spinner{width:24px;height:24px;border:3px solid #292b34;border-top-color:var(--red);border-radius:50%;animation:spin .8s linear infinite}
+.empty{grid-column:1/-1;text-align:center;padding:35px;color:#777;border:1px dashed var(--line);border-radius:12px}
+
+footer{text-align:center;padding:35px 20px;color:#777;font-size:12px;border-top:1px solid rgba(255,255,255,.06)}
+
+@keyframes heroIn{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@keyframes cartPop{50%{transform:scale(1.12)}}
+@keyframes ripple{to{transform:scale(4);opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes modalIn{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes drift{to{background-position:34px 34px}}
+@keyframes progressGlow{to{filter:brightness(1.3)}}
+
+@media(max-width:850px){
+  .nav-links{display:none;position:absolute;left:4%;right:4%;top:64px;background:#0d0f15;border:1px solid var(--line);border-radius:12px;padding:8px;flex-direction:column;align-items:stretch}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .nav-inner{position:relative}
+  .package-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonial-layout{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .hero{min-height:70vh}
+  .hero h1{font-size:45px}
+  .grid3,.stats,.social,.contact-grid{grid-template-columns:1fr}
+  .package-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .package{padding:11px}
+  .package h3{font-size:12px}
+  .price{font-size:14px}
+  .order-btn,.detail-btn{font-size:11px;padding:8px 4px}
+  .toolbar{display:block}
+  .promo{align-items:flex-start;flex-direction:column}
+  .comment-form{grid-template-columns:1fr}
+}
+@media(max-width:400px){
+  .hero h1{font-size:38px}
+  .package h3{font-size:11px}
+  .price{font-size:13px}
+}
+</style>
 </head>
-
 
 <body>
 
+<audio id="bgmusic" loop>
+  <source src="musik.mp3.mp3" type="audio/mpeg">
+</audio>
 
-<!-- =========================
-     NAVBAR
-========================= -->
-
-<header class="navbar">
-
-    <div class="logo">
-        FXNZZ<span>STORE</span>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">FXNZZ <span>STORE</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#paket">Paket</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#kontak">Kontak</a>
+      <a href="#order" class="nav-order">Order</a>
     </div>
-
-
-    <nav>
-
-        <a href="#home">
-            Home
-        </a>
-
-        <a href="#services">
-            Paket
-        </a>
-
-        <a href="#testimonials">
-            Testimoni
-        </a>
-
-        <a href="#contact">
-            Kontak
-        </a>
-
-    </nav>
-
-
-    <button
-        class="nav-order"
-        onclick="scrollToOrder()">
-
-        Order
-
-    </button>
-
-</header>
-
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section id="home" class="hero">
-
-    <div class="hero-content">
-
-        <div class="status-badge">
-            ● OPEN ORDER
-        </div>
-
-
-        <h1>
-
-            JOKI GAME
-
-            <span>
-                CEPAT & AMAN
-            </span>
-
-        </h1>
-
-
-        <p>
-
-            FXNZZ STORE menyediakan jasa joki game
-            dengan harga terjangkau, proses cepat,
-            dan pelayanan responsif.
-
-        </p>
-
-
-        <div class="hero-buttons">
-
-            <button
-                class="primary-button"
-                onclick="scrollToServices()">
-
-                Lihat Paket
-
-            </button>
-
-
-            <button
-                class="secondary-button"
-                onclick="scrollToTestimonials()">
-
-                Lihat Testimoni
-
-            </button>
-
-        </div>
-
+    <div style="display:flex;align-items:center;gap:7px">
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <button class="cart" id="cartBtn">Order: <span id="cartCount">0</span></button>
     </div>
+  </div>
+</nav>
 
-
-
-    <div class="hero-card">
-
-        <div class="hero-card-top">
-
-            <span>
-                FXNZZ STORE
-            </span>
-
-            <span class="online">
-                ● ONLINE
-            </span>
-
-        </div>
-
-
-        <div class="hero-card-number">
-            24/7
-        </div>
-
-
-        <p>
-            Fast Response
-        </p>
-
-
-        <div class="hero-mini-stats">
-
-            <div>
-
-                <strong id="hero-orders">
-                    0
-                </strong>
-
-                <span>
-                    Orders
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong id="hero-testimonials">
-                    0
-                </strong>
-
-                <span>
-                    Testimoni
-                </span>
-
-            </div>
-
-        </div>
-
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="eyebrow"><span class="status-dot"></span> FXNZZ STORE • <span id="heroStatus">OPEN</span></div>
+    <h1>JOKI GAME <span>— CEPAT & AMAN</span></h1>
+    <p>Joki game untuk kamu yang tidak punya waktu farming, mengejar pull character, atau menyelesaikan konten endgame. Pilih layanan, masukkan ke order, lalu checkout langsung melalui WhatsApp.</p>
+    <div class="hero-buttons">
+      <a href="#paket" class="btn primary">Lihat Paket</a>
+      <a href="https://wa.me/6285850654348" target="_blank" rel="noopener" class="btn">WhatsApp</a>
     </div>
-
+  </div>
 </section>
 
-
-
-<!-- =========================
-     TRUST
-========================= -->
-
-<section class="trust-section">
-
-    <div class="trust-card">
-
-        <div class="trust-icon">
-            ✓
-        </div>
-
-        <div>
-
-            <h3>
-                Joki Aman
-            </h3>
-
-            <p>
-                Akun ditangani dengan prosedur
-                yang terkontrol.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="trust-card">
-
-        <div class="trust-icon">
-            ⚡
-        </div>
-
-        <div>
-
-            <h3>
-                Fast Response
-            </h3>
-
-            <p>
-                Respon cepat untuk konsultasi
-                dan pemesanan.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="trust-card">
-
-        <div class="trust-icon">
-            ★
-        </div>
-
-        <div>
-
-            <h3>
-                Terpercaya
-            </h3>
-
-            <p>
-                Tersedia bukti hasil joki
-                dari pelanggan.
-            </p>
-
-        </div>
-
-    </div>
-
+<main class="container">
+<section class="section reveal">
+  <div class="grid3">
+    <div class="trust-card"><h3>Joki Aman</h3><p>Akun digunakan sesuai layanan yang dipesan dan detail order dikonfirmasi sebelum pengerjaan.</p></div>
+    <div class="trust-card"><h3>Fast Response</h3><p>Hubungi admin melalui WhatsApp untuk konsultasi, pengecekan akun, dan order.</p></div>
+    <div class="trust-card"><h3>Terpercaya</h3><p>Hasil pengerjaan dapat digunakan sebagai bahan testimoni setelah layanan selesai.</p></div>
+  </div>
 </section>
 
-
-
-<!-- =========================
-     STATISTICS
-========================= -->
-
-<section class="statistics">
-
-    <div class="stat">
-
-        <strong id="total-orders">
-            0
-        </strong>
-
-        <span>
-            Total Order
-        </span>
-
-    </div>
-
-
-    <div class="stat">
-
-        <strong id="total-testimonials">
-            0
-        </strong>
-
-        <span>
-            Testimoni
-        </span>
-
-    </div>
-
-
-    <div class="stat">
-
-        <strong>
-            5.0
-        </strong>
-
-        <span>
-            Rating
-        </span>
-
-    </div>
-
-
-    <div class="stat">
-
-        <strong>
-            24/7
-        </strong>
-
-        <span>
-            Response
-        </span>
-
-    </div>
-
+<section class="section reveal">
+  <div class="section-title"><h2>Statistik Toko</h2><p>Data lokal browser untuk demo dan monitoring tampilan.</p></div>
+  <div class="stats">
+    <div class="stat-card"><div class="stat-value" id="statOrders">0</div><div class="stat-label">Total Order</div></div>
+    <div class="stat-card"><div class="stat-value" id="statTestimonials">0</div><div class="stat-label">Testimoni</div></div>
+    <div class="stat-card"><div class="stat-value" id="statRating">5.0</div><div class="stat-label">Rating</div></div>
+    <div class="stat-card"><div class="stat-value">~5m</div><div class="stat-label">Response</div></div>
+  </div>
 </section>
 
-
-
-<!-- =========================
-     SERVICES
-========================= -->
-
-<section id="services" class="services-section">
-
-    <div class="section-title">
-
-        <span>
-            OUR SERVICES
-        </span>
-
-        <h2>
-            Pilih Paket Joki
-        </h2>
-
-        <p>
-            Pilih game dan paket yang ingin
-            kamu pesan.
-        </p>
-
-    </div>
-
-
-    <div class="game-filter">
-
-        <button
-            class="filter-button active"
-            onclick="filterGame('all', this)">
-
-            Semua
-
-        </button>
-
-
-        <button
-            class="filter-button"
-            onclick="filterGame('zzz', this)">
-
-            Zenless Zone Zero
-
-        </button>
-
-
-        <button
-            class="filter-button"
-            onclick="filterGame('pgr', this)">
-
-            Punishing Gray Raven
-
-        </button>
-
-    </div>
-
-
-
-    <div class="content-layout">
-
-        <div class="packages-area">
-
-            <div
-                id="package-container"
-                class="package-container">
-
-            </div>
-
-        </div>
-
-
-
-        <aside
-            id="order"
-            class="order-panel">
-
-            <div class="order-header">
-
-                <div>
-
-                    <span>
-                        YOUR ORDER
-                    </span>
-
-                    <h3>
-                        Pesanan
-                    </h3>
-
-                </div>
-
-
-                <div
-                    id="cart-count"
-                    class="cart-count">
-
-                    0
-
-                </div>
-
-            </div>
-
-
-            <div
-                id="cart-container"
-                class="cart-container">
-
-            </div>
-
-
-            <div class="order-total">
-
-                <span>
-                    Total
-                </span>
-
-                <strong id="total-price">
-                    Rp0
-                </strong>
-
-            </div>
-
-
-            <button
-                class="checkout-button"
-                onclick="orderNow()">
-
-                Order via WhatsApp
-
-            </button>
-
-        </aside>
-
-    </div>
-
+<section class="section reveal" id="paket">
+  <div class="section-title"><h2>Paket Joki</h2><p>Pilih game, kategori, atau cari layanan secara langsung.</p></div>
+  <div class="promo">
+    <div><strong>Promo/Event</strong><br><span style="color:#999;font-size:12px">Slot promo berikutnya tersedia dalam:</span></div>
+    <div class="countdown" id="countdown">00:00:00:00</div>
+  </div>
+  <div class="filter-row" id="gameFilters">
+    <button class="filter active" data-game="ALL">Semua</button>
+    <button class="filter" data-game="ZZZ">Zenless Zone Zero</button>
+    <button class="filter" data-game="PGR">Punishing Gray Raven</button>
+  </div>
+  <div class="filter-row" id="categoryFilters">
+    <button class="filter active" data-category="ALL">Semua Kategori</button>
+    <button class="filter" data-category="ENDGAME">Endgame</button>
+    <button class="filter" data-category="MIDGAME / FARMING">Midgame / Farming</button>
+    <button class="filter" data-category="PULL JOKI">Pull Joki</button>
+    <button class="filter" data-category="SPECIAL LIST">Special</button>
+  </div>
+  <div class="toolbar"><input class="search" id="searchInput" placeholder="Cari paket, misalnya: Shiyu, Pull, Rawat Akun..."></div>
+  <div id="packageGrid" class="package-grid"><div class="loading"><div class="spinner"></div></div></div>
 </section>
 
-
-
-<!-- =========================
-     TESTIMONIALS
-========================= -->
-
-<section
-    id="testimonials"
-    class="testimonial-section">
-
-    <div class="section-title">
-
-        <span>
-            CUSTOMER PROOF
-        </span>
-
-        <h2>
-            Hasil Joki & Testimoni
-        </h2>
-
-        <p>
-            Pelanggan yang sudah selesai melakukan
-            order dapat mengirimkan bukti hasil joki.
-        </p>
-
-    </div>
-
-
-    <div class="testimonial-layout">
-
-
-        <div class="testimonial-form">
-
-            <h3>
-                Kirim Testimoni
-            </h3>
-
-
-            <p class="form-description">
-
-                Bagikan pengalaman dan screenshot
-                hasil joki kamu.
-
-            </p>
-
-
-            <input
-                type="text"
-                id="review-name"
-                placeholder="Nama / Username">
-
-
-            <textarea
-                id="review-comment"
-                placeholder="Tulis pengalaman kamu..."></textarea>
-
-
-            <div class="rating-input">
-
-                <span>
-                    Rating:
-                </span>
-
-
-                <div id="star-input">
-
-                    <button onclick="setRating(1)">
-                        ★
-                    </button>
-
-                    <button onclick="setRating(2)">
-                        ★
-                    </button>
-
-                    <button onclick="setRating(3)">
-                        ★
-                    </button>
-
-                    <button onclick="setRating(4)">
-                        ★
-                    </button>
-
-                    <button onclick="setRating(5)">
-                        ★
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <label class="upload-box">
-
-                <span>
-                    + Tambahkan Foto Hasil Joki
-                </span>
-
-
-                <input
-                    type="file"
-                    id="review-image"
-                    accept="image/*"
-                    onchange="previewImage(event)">
-
-            </label>
-
-
-            <div
-                id="image-preview"
-                class="image-preview">
-
-            </div>
-
-
-            <button
-                class="submit-review"
-                onclick="submitReview()">
-
-                Kirim Testimoni
-
-            </button>
-
-        </div>
-
-
-
-        <div
-            id="testimonial-list"
-            class="testimonial-list">
-
-        </div>
-
-    </div>
-
+<section class="section reveal" id="order">
+  <div class="section-title"><h2>Order</h2><p>Keranjang order aktif di tombol Order pada navbar.</p></div>
+  <div class="contact-card">
+    <h3>Checkout cepat</h3>
+    <p>Tambahkan paket ke keranjang, periksa jumlah dan total, kemudian checkout ke WhatsApp. Detail akhir seperti kondisi akun/team dapat dikonfirmasi dengan admin.</p>
+    <button class="btn primary" style="margin-top:12px" id="openCartFromSection">Buka Keranjang</button>
+  </div>
 </section>
 
-
-
-<!-- =========================
-     COMMENTS
-========================= -->
-
-<section class="comments-section">
-
-    <div class="section-title">
-
-        <span>
-            COMMUNITY
-        </span>
-
-        <h2>
-            Komentar Pelanggan
-        </h2>
-
-    </div>
-
-
-    <div class="comment-layout">
-
-
-        <div class="comment-form">
-
-            <input
-                type="text"
-                id="comment-name"
-                placeholder="Nama / Username">
-
-
-            <textarea
-                id="comment-text"
-                placeholder="Tulis komentar..."></textarea>
-
-
-            <button
-                onclick="submitComment()">
-
-                Kirim Komentar
-
-            </button>
-
+<section class="section reveal" id="testimoni">
+  <div class="section-title"><h2>Testimoni</h2><p>Data testimoni pada versi ini disimpan lokal di browser. Untuk database publik, sambungkan Firebase Firestore.</p></div>
+  <div class="testimonial-layout">
+    <form class="form-card" id="testimonialForm">
+      <h3>Kirim Testimoni</h3>
+      <div class="field"><label>Nama</label><input id="tName" required maxlength="40" placeholder="Nama kamu"></div>
+      <div class="field"><label>Komentar</label><textarea id="tComment" required maxlength="500" placeholder="Tulis pengalamanmu..."></textarea></div>
+      <div class="field"><label>Rating</label>
+        <div class="rating-input">
+          <input id="r5" name="rating" type="radio" value="5" checked><label for="r5">★</label>
+          <input id="r4" name="rating" type="radio" value="4"><label for="r4">★</label>
+          <input id="r3" name="rating" type="radio" value="3"><label for="r3">★</label>
+          <input id="r2" name="rating" type="radio" value="2"><label for="r2">★</label>
+          <input id="r1" name="rating" type="radio" value="1"><label for="r1">★</label>
         </div>
-
-
-        <div
-            id="comment-list"
-            class="comment-list">
-
-        </div>
-
-    </div>
-
+      </div>
+      <div class="field"><label>Foto (opsional)</label><input id="tPhoto" type="file" accept="image/*"></div>
+      <div class="photo-preview" id="photoPreview">Preview foto</div>
+      <button class="btn primary full" style="margin-top:12px" type="submit">Kirim Testimoni</button>
+    </form>
+    <div class="testimonials" id="testimonialList"></div>
+  </div>
 </section>
 
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section
-    id="contact"
-    class="contact-section">
-
-    <h2>
-        Siap melakukan order?
-    </h2>
-
-
-    <p>
-        Hubungi FXNZZ STORE untuk informasi
-        dan pemesanan.
-    </p>
-
-
-    <button
-        class="primary-button"
-        onclick="contactWhatsApp()">
-
-        WhatsApp
-
-    </button>
-
+<section class="section reveal">
+  <div class="section-title"><h2>Komentar Pelanggan</h2><p>Komentar singkat dapat ditambahkan dari form berikut.</p></div>
+  <form class="comment-form" id="commentForm">
+    <input id="cName" required maxlength="40" placeholder="Nama">
+    <input id="cText" required maxlength="180" placeholder="Komentar">
+    <button class="btn primary" type="submit">Kirim</button>
+  </form>
+  <div class="comment-list" id="commentList"></div>
 </section>
 
+<section class="section reveal">
+  <div class="section-title"><h2>Social Media</h2><p>Akses langsung akun FXNZZ STORE.</p></div>
+  <div class="social">
+    <a href="https://www.tiktok.com/@fxnzzz_store" target="_blank" rel="noopener">TikTok<small>@fxnzzz_store</small></a>
+    <a href="https://www.instagram.com/fxnzz_storee" target="_blank" rel="noopener">Instagram<small>@fxnzz_storee</small></a>
+    <a href="https://wa.me/6285850654348" target="_blank" rel="noopener">WhatsApp<small>+62 858-5065-4348</small></a>
+  </div>
+</section>
 
+<section class="section reveal" id="kontak">
+  <div class="section-title"><h2>Kontak</h2><p>Hubungi admin untuk pengecekan kondisi akun dan detail pengerjaan.</p></div>
+  <div class="contact-grid">
+    <div class="contact-card"><h3>WhatsApp Admin</h3><p>Nomor utama FXNZZ STORE untuk konsultasi dan checkout.</p><div class="copy-box"><input value="6285850654348" id="waNumber" readonly><button id="copyWa">Copy</button></div><a class="btn primary" style="margin-top:10px" href="https://wa.me/6285850654348" target="_blank" rel="noopener">Chat WhatsApp</a></div>
+    <div class="contact-card"><h3>Status Toko: <span id="storeStatus" style="color:var(--green)">OPEN</span></h3><p>Status tampilan otomatis mengikuti jam browser. Admin tetap menjadi sumber konfirmasi terakhir untuk order.</p><div class="progress-wrap"><div class="progress-label"><span>Progress pengerjaan aktif</span><span>70%</span></div><div class="progress"><span></span></div></div></div>
+  </div>
+</section>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<section class="section reveal">
+  <div class="section-title"><h2>FAQ</h2><p>Pertanyaan umum sebelum order.</p></div>
+  <div class="faq">
+    <div class="faq-item"><button class="faq-q">Bagaimana cara order?<span>＋</span></button><div class="faq-a">Pilih paket, klik Tambah Order, periksa keranjang, lalu checkout melalui WhatsApp.</div></div>
+    <div class="faq-item"><button class="faq-q">Apakah harga bisa berubah?<span>＋</span></button><div class="faq-a">Price list pada halaman ini menjadi acuan tampilan. Konfirmasi admin diperlukan bila ada kondisi akun khusus atau perubahan layanan.</div></div>
+    <div class="faq-item"><button class="faq-q">Apakah semua layanan punya syarat team?<span>＋</span></button><div class="faq-a">Beberapa layanan memang bergantung pada kondisi akun atau team, termasuk layanan yang diberi catatan tersebut pada price list.</div></div>
+    <div class="faq-item"><button class="faq-q">Apakah testimoni langsung masuk database publik?<span>＋</span></button><div class="faq-a">Belum. Versi satu-file ini menggunakan localStorage. Untuk penyimpanan lintas perangkat dan moderasi pending/approve, gunakan Firebase Firestore.</div></div>
+  </div>
+</section>
 
-<footer>
+<section class="section reveal">
+  <div class="coming"><strong>Akan segera dibuka</strong><br>Konten joki: Etheria: Restart · Arknights: Endfield · Wuthering Waves · Arena Breakout · Free Fire · Mobile Legends</div>
+</section>
+</main>
 
-    <div class="logo">
-        FXNZZ<span>STORE</span>
-    </div>
+<footer>FXNZZ STORE — Joki Game<br><br>© 2026 FXNZZ STORE</footer>
 
+<button class="back-top" id="backTop">↑</button>
+<div class="toast" id="toast"></div>
 
-    <p>
-        Jasa Joki Game
-    </p>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-head"><strong>Keranjang Order</strong><button class="modal-close" id="closeCart">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot"><div class="total"><span>Total</span><span id="cartTotal">Rp0</span></div><button class="btn primary full" id="checkoutBtn">Checkout WhatsApp</button></div>
+</div>
 
+<div class="modal" id="detailModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3 id="detailTitle">Detail Paket</h3><button class="modal-close" data-close-modal>×</button></div>
+    <div class="modal-body" id="detailBody"></div>
+    <div class="confirm-actions"><button class="btn" data-close-modal>Tutup</button><button class="btn primary" id="detailOrder">Tambah Order</button></div>
+  </div>
+</div>
 
-    <small>
-        © 2026 FXNZZ STORE
-    </small>
-
-</footer>
-
-
+<div class="modal" id="confirmModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Konfirmasi Checkout</h3><button class="modal-close" data-close-confirm>×</button></div>
+    <div class="modal-body">Kamu akan diarahkan ke WhatsApp dengan ringkasan order. Pastikan paket dan jumlah sudah benar.</div>
+    <div class="confirm-actions"><button class="btn" data-close-confirm>Batal</button><button class="btn primary" id="confirmCheckout">Lanjut ke WhatsApp</button></div>
+  </div>
+</div>
 
 <script>
+"use strict";
 
-
-// ==========================================
-// DATA PAKET
-// ==========================================
+const WA_NUMBER = "6285850654348";
 
 const packages = [
+  {game:"ZZZ",category:"ENDGAME",name:"Shiyu Defense — Full Clear*",price:18000,badge:"POPULAR",desc:"Full clear Shiyu Defense. Full clear tergantung kondisi/team akun."},
+  {game:"ZZZ",category:"ENDGAME",name:"Deadly Assault — Full Clear*",price:18000,badge:"POPULAR",desc:"Full clear Deadly Assault. Full clear tergantung kondisi/team akun."},
+  {game:"ZZZ",category:"ENDGAME",name:"Battle Trial — / 3 Floor",price:8000,badge:"",desc:"Pengerjaan Battle Trial sampai 3 Floor."},
+  {game:"ZZZ",category:"ENDGAME",name:"Endgame Combat Event",price:13000,badge:"",desc:"Pengerjaan konten combat event endgame."},
+  {game:"ZZZ",category:"ENDGAME",name:"Hollow Zero — Difficulty Max + Full Clear",price:13000,badge:"BEST VALUE",desc:"Hollow Zero difficulty max dan full clear."},
+  {game:"ZZZ",category:"ENDGAME",name:"Event Combat",price:10000,badge:"",desc:"Pengerjaan event combat."},
+  {game:"ZZZ",category:"MIDGAME / FARMING",name:"Rawat Akun — 2 Patch",price:15000,badge:"POPULAR",desc:"Perawatan akun selama 2 patch."},
+  {game:"ZZZ",category:"MIDGAME / FARMING",name:"Rawat Akun VIP — All Content Endgame, 1 Patch",price:60000,badge:"BEST VALUE",desc:"Rawat akun dengan target seluruh content endgame selama 1 patch."},
+  {game:"ZZZ",category:"MIDGAME / FARMING",name:"Event Permanen",price:12000,badge:"",desc:"Farming event sesuai kebutuhan."},
+  {game:"ZZZ",category:"MIDGAME / FARMING",name:"Hollow Zero",price:8000,badge:"POPULAR",desc:"Pengerjaan Hollow Zero HIGH DIFFICULTY."},
+  {game:"ZZZ",category:"MIDGAME / FARMING",name:"Quest",price:8000,badge:"",desc:"Rp8k / 6 quest."},
+  {game:"ZZZ",category:"MIDGAME / FARMING",name:"Story — 2 Chapter",price:12000,badge:"",desc:"Pengerjaan Story sampai 2 chapter."},
+  {game:"ZZZ",category:"PULL JOKI",name:"10 Pull",price:10000,badge:"",desc:"Joki 10 pull."},
+  {game:"ZZZ",category:"PULL JOKI",name:"30 Pull",price:25000,badge:"",desc:"Joki 30 pull."},
+  {game:"ZZZ",category:"PULL JOKI",name:"50 Pull",price:45000,badge:"POPULAR",desc:"Joki 50 pull."},
+  {game:"ZZZ",category:"PULL JOKI",name:"100 Pull",price:95000,badge:"BEST VALUE",desc:"Joki 100 pull."},
 
-    // ==========================
-    // ZENLESS ZONE ZERO
-    // ==========================
-
-    {
-        id: 1,
-        name: "Story + Quest",
-        game: "zzz",
-        description:
-            "Jasa menyelesaikan Story dan Quest.",
-        price: 6000
-    },
-
-    {
-        id: 2,
-        name: "Pull 10x",
-        game: "zzz",
-        description:
-            "Jasa melakukan 10 Pull.",
-        price: 8000
-    },
-
-    {
-        id: 3,
-        name: "Battle Trial",
-        game: "zzz",
-        description:
-            "Jasa menyelesaikan Battle Trial.",
-        price: 10000
-    },
-
-    {
-        id: 4,
-        name: "Shiyu Defense",
-        game: "zzz",
-        description:
-            "Jasa menyelesaikan Shiyu Defense.",
-        price: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
-    },
-
-    {
-        id: 5,
-        name: "Rawat Akun 2 Patch",
-        game: "zzz",
-        description:
-            "Jasa rawat akun selama 2 patch.",
-        price: 20000
-    },
-
-
-    // ==========================
-    // PUNISHING GRAY RAVEN
-    // ==========================
-
-    {
-        id: 6,
-        name: "Story + Quest",
-        game: "pgr",
-        description:
-            "Jasa menyelesaikan Story dan Quest.",
-        price: 6000
-    },
-
-    {
-        id: 7,
-        name: "Daily Mission",
-        game: "pgr",
-        description:
-            "Jasa menyelesaikan Daily Mission.",
-        price: 5000
-    },
-
-    {
-        id: 8,
-        name: "VIP 2 Minggu",
-        game: "pgr",
-        description:
-            "Jasa rawat akun VIP selama 2 minggu.",
-        price: 15000
-    },
-
-    {
-        id: 9,
-        name: "Stronghold 7 Stage",
-        game: "pgr",
-        description:
-            "Jasa menyelesaikan 7 Stage Stronghold.",
-        price: 8000
-    },
-
-    {
-        id: 10,
-        name: "Cursed Wave 40 Level",
-        game: "pgr",
-        description:
-            "Jasa menyelesaikan Cursed Wave hingga level 40.",
-        price: 20000
-    },
-
-    {
-        id: 11,
-        name: "Awakening Thundra 30 Level",
-        game: "pgr",
-        description:
-            "Jasa menyelesaikan Awakening Thundra hingga level 30.",
-        price: 7000
-    },
-
-    {
-        id: 12,
-        name: "Derived from Matrix 40 Level",
-        game: "pgr",
-        description:
-            "Jasa menyelesaikan Derived from Matrix hingga level 40.",
-        price: 20000
-    },
-
-    {
-        id: 13,
-        name: "Rawat Akun VIP 3 Patch",
-        game: "pgr",
-        description:
-            "Jasa rawat akun VIP selama 3 patch.",
-        price: 35000
-    }
+  {game:"PGR",category:"SPECIAL LIST",name:"Rawat Akun VIP — All Content Endgame, 3 Patch",price:58000,badge:"BEST VALUE",desc:"Rawat akun VIP dengan target seluruh content endgame selama 3 patch."},
+  {game:"PGR",category:"ENDGAME",name:"Stronghold — / 7 Stage",price:10000,badge:"",desc:"Pengerjaan Stronghold sampai 7 Stage."},
+  {game:"PGR",category:"ENDGAME",name:"Norman Revival Plan (tergantung team)",price:20000,badge:"",desc:"Harga/hasil pengerjaan bergantung pada kondisi team akun."},
+  {game:"PGR",category:"ENDGAME",name:"Warzone intensive (tergantung team)",price:12000,badge:"",desc:"Warzone intensive, tergantung kondisi team akun."},
+  {game:"PGR",category:"ENDGAME",name:"PPC — Intensive (tergantung team)",price:10000,badge:"",desc:"PPC intensive, tergantung kondisi team akun."},
+  {game:"PGR",category:"MIDGAME / FARMING",name:"Cursed Wave — / 15 Level",price:5000,badge:"POPULAR",desc:"Pengerjaan Cursed Wave sampai 15 level."},
+  {game:"PGR",category:"MIDGAME / FARMING",name:"Awakening Thundra — / 10 Level",price:2000,badge:"",desc:"Pengerjaan Awakening Thundra sampai 10 level."},
+  {game:"PGR",category:"MIDGAME / FARMING",name:"Derived from Matrix — / 10 Level",price:3000,badge:"",desc:"Pengerjaan Derived from Matrix sampai 10 level."},
+  {game:"PGR",category:"MIDGAME / FARMING",name:"Rawat Akun Mid — Weekly + Daily + Event, 60 Hari",price:25000,badge:"POPULAR",desc:"Weekly + daily + event selama 60 hari."},
+  {game:"PGR",category:"MIDGAME / FARMING",name:"Rawat Akun Endgame — 30 Hari",price:28000,badge:"BEST VALUE",desc:"Rawat akun endgame selama 30 hari."} 
 
 ];
 
+const state = {
+  game:"ALL",
+  category:"ALL",
+  search:"",
+  cart:[],
+  detailIndex:null
+};
 
-// ==========================================
-// STATE
-// ==========================================
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
 
-let cart = [];
+function rupiah(n){return "Rp"+n.toLocaleString("id-ID").replace(/\./g,".")}
+function escapeHTML(str){
+  return String(str).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+}
+function toast(msg){
+  const el=$("#toast"); el.textContent=msg; el.classList.add("show");
+  clearTimeout(window.toastTimer); window.toastTimer=setTimeout(()=>el.classList.remove("show"),2400);
+}
+function save(key,val){localStorage.setItem(key,JSON.stringify(val))}
+function load(key,fallback){try{return JSON.parse(localStorage.getItem(key)) ?? fallback}catch{return fallback}}
 
-let selectedRating = 0;
-
-let previewImageData = null;
-
-
-// ==========================================
-// FORMAT HARGA
-// ==========================================
-
-function formatPrice(price) {
-
-    return new Intl.NumberFormat(
-        "id-ID",
-        {
-            style: "currency",
-            currency: "IDR",
-            maximumFractionDigits: 0
-        }
-    ).format(price);
-
+function renderPackages(){
+  const grid=$("#packageGrid");
+  grid.innerHTML='<div class="loading"><div class="spinner"></div></div>';
+  setTimeout(()=>{
+    const q=state.search.trim().toLowerCase();
+    const list=packages.map((p,index)=>({...p,index})).filter(p=>{
+      const gameOK=state.game==="ALL"||p.game===state.game;
+      const catOK=state.category==="ALL"||p.category===state.category;
+      const searchOK=!q||`${p.name} ${p.category} ${p.game}`.toLowerCase().includes(q);
+      return gameOK&&catOK&&searchOK;
+    });
+    if(!list.length){grid.innerHTML='<div class="empty">Paket tidak ditemukan. Coba kata kunci atau filter lain.</div>';return}
+    grid.innerHTML=list.map((p,i)=>`
+      <article class="package">
+        <div class="category">${p.game} • ${escapeHTML(p.category)}</div>
+        ${p.badge?`<div class="badges"><span class="badge ${p.badge==="BEST VALUE"?"gold":"red"}">${escapeHTML(p.badge)}</span></div>`:""}
+        <h3>${escapeHTML(p.name)}</h3>
+        <div class="price">${rupiah(p.price)}</div>
+        <div class="package-actions">
+          <button class="order-btn" data-add="${p.index}">Tambah Order</button>
+          <button class="detail-btn" data-detail="${p.index}">Detail</button>
+        </div>
+        <div class="progress-wrap"><div class="progress-label"><span>Status layanan</span><span>Ready</span></div><div class="progress"><span></span></div></div>
+      </article>`).join("");
+    requestAnimationFrame(()=>$$(".package").forEach((el,i)=>setTimeout(()=>el.classList.add("show"),i*35)));
+  },120);
 }
 
+function addOrder(index){
+  const p=packages[index];
+  const found=state.cart.find(x=>x.index===index);
+  if(found) found.qty++;
+  else state.cart.push({index,qty:1});
+  renderCart();
+  save("fxnzz_cart",state.cart);
+  const cart=$("#cartBtn"); cart.classList.remove("pop"); void cart.offsetWidth; cart.classList.add("pop");
+  toast(`${p.name} ditambahkan ke order.`);
+}
+function renderCart(){
+  const count=state.cart.reduce((a,b)=>a+b.qty,0);
+  $("#cartCount").textContent=count;
+  const box=$("#cartItems");
+  if(!state.cart.length){box.innerHTML='<div class="empty">Keranjang masih kosong.</div>';$("#cartTotal").textContent="Rp0";return}
+  let total=0;
+  box.innerHTML=state.cart.map(item=>{
+    const p=packages[item.index]; const subtotal=p.price*item.qty; total+=subtotal;
+    return `<div class="cart-item">
+      <div class="row"><strong>${escapeHTML(p.name)}</strong><button class="remove" data-remove="${item.index}">Hapus</button></div>
+      <div style="color:#ff5276;margin-top:5px">${rupiah(p.price)}</div>
+      <div class="qty"><button data-minus="${item.index}">−</button><span>${item.qty}</span><button data-plus="${item.index}">+</button><span style="margin-left:auto;color:#bbb">${rupiah(subtotal)}</span></div>
+    </div>`;
+  }).join("");
+  $("#cartTotal").textContent=rupiah(total);
+}
+function openCart(){$("#cartPanel").classList.add("open");renderCart()}
+function closeCart(){$("#cartPanel").classList.remove("open")}
 
-// ==========================================
-// DISPLAY PACKAGE
-// ==========================================
+function openDetail(index){
+  state.detailIndex=index; const p=packages[index];
+  $("#detailTitle").textContent=p.name;
+  $("#detailBody").innerHTML=`<strong style="color:#ff5276">${rupiah(p.price)}</strong><br><br>${escapeHTML(p.desc)}<br><br><span style="color:#777">Game:</span> ${p.game}<br><span style="color:#777">Kategori:</span> ${escapeHTML(p.category)}`;
+  $("#detailModal").classList.add("open");
+}
 
-function displayPackages(game = "all") {
+function checkout(){
+  if(!state.cart.length){toast("Keranjang masih kosong.");return}
+  $("#confirmModal").classList.add("open");
+}
+function buildWhatsApp(){
+  let total=0;
+  const lines=state.cart.map((item,i)=>{
+    const p=packages[item.index]; total+=p.price*item.qty;
+    return `${i+1}. ${p.name} x${item.qty} — ${rupiah(p.price*item.qty)}`;
+  });
+  const text=`Halo FXNZZ STORE, saya ingin order:%0A%0A${lines.join("%0A")}%0A%0ATotal: ${rupiah(total)}%0A%0AMohon konfirmasi ketersediaan dan detail pengerjaan.`;
+  return `https://wa.me/${WA_NUMBER}?text=${text}`;
+}
 
-    const container =
-        document.getElementById(
-            "package-container"
-        );
+function renderTestimonials(){
+  const data=load("fxnzz_testimonials",[]);
+  const list=$("#testimonialList");
+  $("#statTestimonials").textContent=data.length;
+  if(!data.length){list.innerHTML='<div class="empty">Belum ada testimoni. Jadilah yang pertama.</div>';$("#statRating").textContent="5.0";return}
+  const avg=data.reduce((a,b)=>a+b.rating,0)/data.length;
+  $("#statRating").textContent=avg.toFixed(1);
+  list.innerHTML=data.slice().reverse().map(t=>`
+    <div class="comment-card">
+      <div class="top"><strong>${escapeHTML(t.name)}</strong><span class="stars">${"★".repeat(t.rating)}${"☆".repeat(5-t.rating)}</span></div>
+      ${t.photo?`<img src="${t.photo}" alt="Foto testimoni" style="width:100%;max-height:210px;object-fit:cover;border-radius:9px;margin-top:10px">`:""}
+      <p>${escapeHTML(t.comment)}</p>
+      <div class="comment-meta">${escapeHTML(t.date)}</div>
+    </div>`).join("");
+}
+function renderComments(){
+  const data=load("fxnzz_comments",[]);
+  const list=$("#commentList");
+  if(!data.length){list.innerHTML='<div class="empty">Belum ada komentar.</div>';return}
+  list.innerHTML=data.slice().reverse().map(c=>`<div class="comment-card"><strong>${escapeHTML(c.name)}</strong><p>${escapeHTML(c.text)}</p><div class="comment-meta">${escapeHTML(c.date)}</div></div>`).join("");
+}
 
+function updateStats(){
+  const orders=load("fxnzz_total_orders",0);
+  $("#statOrders").textContent=orders;
+}
+function incrementOrders(){
+  const n=load("fxnzz_total_orders",0)+1;save("fxnzz_total_orders",n);updateStats();
+}
 
-    container.innerHTML = "";
+function setStoreStatus(){
+  const h=new Date().getHours();
+  const open=h>=8&&h<23;
+  $("#storeStatus").textContent=open?"OPEN":"CLOSED";
+  $("#heroStatus").textContent=open?"OPEN":"CLOSED";
+  $("#storeStatus").style.color=open?"var(--green)":"#ff6b82";
+}
 
+function startCountdown(){
+  let target=load("fxnzz_promo_target",null);
+  if(!target||target<Date.now()){target=Date.now()+((3*24+7)*60*60*1000);save("fxnzz_promo_target",target)}
+  const tick=()=>{
+    let d=Math.max(0,target-Date.now());
+    const days=Math.floor(d/86400000);d%=86400000;
+    const hrs=Math.floor(d/3600000);d%=3600000;
+    const min=Math.floor(d/60000);const sec=Math.floor((d%60000)/1000);
+    $("#countdown").textContent=`${String(days).padStart(2,"0")}:${String(hrs).padStart(2,"0")}:${String(min).padStart(2,"0")}:${String(sec).padStart(2,"0")}`;
+  };
+  tick();setInterval(tick,1000);
+}
 
-    const filteredPackages =
-        game === "all"
-            ? packages
-            : packages.filter(
-                item => item.game === game
-            );
+function setupReveal(){
+  const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.08});
+  $$(".reveal").forEach(x=>obs.observe(x));
+}
+function setupActiveNav(){
+  const sections=["home","paket","testimoni","kontak","order"].map(id=>document.getElementById(id));
+  const links=$$(".nav-links a");
+  const obs=new IntersectionObserver(entries=>entries.forEach(e=>{
+    if(e.isIntersecting)links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id));
+  }),{rootMargin:"-35% 0px -55% 0px"});
+  sections.forEach(s=>s&&obs.observe(s));
+}
 
+document.addEventListener("click",e=>{
+  const btn=e.target.closest("button,.btn,.filter,.social a,.nav-links a");
+  if(btn){
+    const rect=btn.getBoundingClientRect();
+    const r=document.createElement("span");r.className="ripple";
+    const size=Math.max(rect.width,rect.height);r.style.width=r.style.height=size+"px";
+    r.style.left=(e.clientX-rect.left-size/2)+"px";r.style.top=(e.clientY-rect.top-size/2)+"px";
+    btn.appendChild(r);setTimeout(()=>r.remove(),520);
+  }
+  const add=e.target.closest("[data-add]"); if(add){addOrder(+add.dataset.add);return}
+  const detail=e.target.closest("[data-detail]"); if(detail){openDetail(+detail.dataset.detail);return}
+  const plus=e.target.closest("[data-plus]"); if(plus){const x=state.cart.find(i=>i.index===+plus.dataset.plus);if(x)x.qty++;renderCart();save("fxnzz_cart",state.cart);return}
+  const minus=e.target.closest("[data-minus]"); if(minus){const x=state.cart.find(i=>i.index===+minus.dataset.minus);if(x){x.qty--;if(x.qty<=0)state.cart=state.cart.filter(i=>i.index!==x.index)}renderCart();save("fxnzz_cart",state.cart);return}
+  const rem=e.target.closest("[data-remove]"); if(rem){state.cart=state.cart.filter(i=>i.index!==+rem.dataset.remove);renderCart();save("fxnzz_cart",state.cart);toast("Paket dihapus.");return}
+});
 
-    filteredPackages.forEach(item => {
+$("#gameFilters").addEventListener("click",e=>{
+  const b=e.target.closest("[data-game]");if(!b)return;
+  state.game=b.dataset.game;
+  $$("#gameFilters .filter").forEach(x=>x.classList.toggle("active",x===b));
+  renderPackages();
+});
+$("#categoryFilters").addEventListener("click",e=>{
+  const b=e.target.closest("[data-category]");if(!b)return;
+  state.category=b.dataset.category;
+  $$("#categoryFilters .filter").forEach(x=>x.classList.toggle("active",x===b));
+  renderPackages();
+});
+$("#searchInput").addEventListener("input",e=>{state.search=e.target.value;renderPackages()});
 
-        const card =
-            document.createElement("div");
+$("#cartBtn").onclick=()=>$("#cartPanel").classList.contains("open")?closeCart():openCart();
+$("#openCartFromSection").onclick=openCart;
+$("#closeCart").onclick=closeCart;
+$("#checkoutBtn").onclick=checkout;
+$("#confirmCheckout").onclick=()=>{
+  incrementOrders();
+  window.open(buildWhatsApp(),"_blank","noopener");
+  state.cart=[];save("fxnzz_cart",state.cart);renderCart();
+  $("#confirmModal").classList.remove("open");closeCart();toast("Order disiapkan untuk WhatsApp.");
+};
+$("#detailOrder").onclick=()=>{if(state.detailIndex!==null){addOrder(state.detailIndex);$("#detailModal").classList.remove("open")}};
+$$("[data-close-modal]").forEach(b=>b.onclick=()=>$("#detailModal").classList.remove("open"));
+$$("[data-close-confirm]").forEach(b=>b.onclick=()=>$("#confirmModal").classList.remove("open"));
+$$(".modal").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)m.classList.remove("open")}));
 
+$("#menuBtn").onclick=()=>$("#navLinks").classList.toggle("open");
+$$(".nav-links a").forEach(a=>a.onclick=()=>$("#navLinks").classList.remove("open"));
 
-        card.className =
-            "package-card";
+$$(".faq-q").forEach(q=>q.onclick=()=>q.parentElement.classList.toggle("open"));
 
+$("#tPhoto").addEventListener("change",()=>{
+  const file=$("#tPhoto").files[0];const box=$("#photoPreview");
+  if(!file){box.textContent="Preview foto";return}
+  if(file.size>1.5*1024*1024){toast("Foto maksimal 1.5 MB.");$("#tPhoto").value="";return}
+  const reader=new FileReader();reader.onload=()=>box.innerHTML=`<img src="${reader.result}" alt="Preview">`;reader.readAsDataURL(file);
+});
 
-        const gameName =
-            item.game === "zzz"
-                ? "Zenless Zone Zero"
-                : "Punishing Gray Raven";
-
-
-        card.innerHTML = `
-
-            <span class="package-game">
-                ${gameName}
-            </span>
-
-            <h3>
-                ${item.name}
-            </h3>
-
-            <p>
-                ${item.description}
-            </p>
-
-            <div class="price">
-                ${formatPrice(item.price)}
-            </div>
-
-            <button
-                onclick="addToCart(${item.id})">
-
-                Tambah Pesanan
-
-            </button>
-
-        `;
-
-
-        container.appendChild(card);
-
+$("#testimonialForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const name=$("#tName").value.trim(),comment=$("#tComment").value.trim(),rating=+$('input[name="rating"]:checked').value;
+  const file=$("#tPhoto").files[0];
+  const saveTest=async photo=>{
+  try{
+   await window.firebaseAddDoc(window.firebaseCollection(window.db,"testimonials"),{
+      name:name,
+      comment:comment,
+      rating:rating,
+      photo:photo||"",
+      date:new Date().toLocaleDateString("id-ID"),
+      status:"pending"
     });
 
-}
-
-
-// ==========================================
-// FILTER
-// ==========================================
-
-function filterGame(game, button) {
-
-    document
-        .querySelectorAll(".filter-button")
-        .forEach(btn => {
-
-            btn.classList.remove("active");
-
-        });
-
-
-    button.classList.add("active");
-
-
-    displayPackages(game);
-
-}
-
-
-// ==========================================
-// CART
-// ==========================================
-
-function addToCart(id) {
-
-    const item =
-        packages.find(
-            packageItem =>
-                packageItem.id === id
-        );
-
-
-    if (!item) {
-
-        return;
-
-    }
-
-
-    cart.push(item);
-
-
-    updateCart();
-
-}
-
-
-function removeFromCart(index) {
-
-    cart.splice(index, 1);
-
-
-    updateCart();
-
-}
-
-
-function updateCart() {
-
-    const container =
-        document.getElementById(
-            "cart-container"
-        );
-
-
-    const totalElement =
-        document.getElementById(
-            "total-price"
-        );
-
-
-    const countElement =
-        document.getElementById(
-            "cart-count"
-        );
-
-
-    countElement.innerText =
-        cart.length;
-
-
-    container.innerHTML = "";
-
-
-    if (cart.length === 0) {
-
-        container.innerHTML = `
-
-            <div class="empty-cart">
-
-                <div class="empty-icon">
-                    🛒
-                </div>
-
-                <p>
-                    Belum ada paket.
-                </p>
-
-                <small>
-                    Pilih paket untuk memulai.
-                </small>
-
-            </div>
-
-        `;
-
-
-        totalElement.innerText =
-            "Rp0";
-
-        return;
-
-    }
-
-
-    let total = 0;
-
-
-    cart.forEach((item, index) => {
-
-        total += item.price;
-
-
-        const cartItem =
-            document.createElement("div");
-
-
-        cartItem.className =
-            "cart-item";
-
-
-        cartItem.innerHTML = `
-
-            <div>
-
-                <strong>
-                    ${item.name}
-                </strong>
-
-                <br>
-
-                <small>
-                    ${formatPrice(item.price)}
-                </small>
-
-            </div>
-
-            <button
-                onclick="removeFromCart(${index})">
-
-                Hapus
-
-            </button>
-
-        `;
-
-
-        container.appendChild(cartItem);
-
-    });
-
-
-    totalElement.innerText =
-        formatPrice(total);
-
-}
-
-
-// ==========================================
-// ORDER
-// ==========================================
-
-function orderNow() {
-
-    if (cart.length === 0) {
-
-        alert(
-            "Pilih paket terlebih dahulu."
-        );
-
-        return;
-
-    }
-
-
-    let message =
-        "Halo FXNZZ STORE! Saya ingin order:%0A%0A";
-
-
-    let total = 0;
-
-
-    cart.forEach((item, index) => {
-
-        message +=
-            `${index + 1}. ${item.name}%0A`;
-
-        message +=
-            `Harga: ${formatPrice(item.price)}%0A%0A`;
-
-        total += item.price;
-
-    });
-
-
-    message +=
-        `Total: ${formatPrice(total)}%0A%0A`;
-
-    message +=
-        "Mohon info proses selanjutnya.";
-
-
-    // ==========================
-    // GANTI NOMOR WHATSAPP
-    // ==========================
-
-    const phone =
-        "628XXXXXXXXXX";
-
-
-    window.open(
-
-        `https://wa.me/${phone}?text=${message}`,
-
-        "_blank"
-
-    );
-
-
-    increaseOrderCount();
-
-}
-
-
-// ==========================================
-// ORDER COUNT
-// ==========================================
-
-function increaseOrderCount() {
-
-    let orders =
-        Number(
-            localStorage.getItem(
-                "fxnzzOrders"
-            )
-        ) || 0;
-
-
-    orders++;
-
-
-    localStorage.setItem(
-        "fxnzzOrders",
-        orders
-    );
-
-
-    updateStatistics();
-
-}
-
-
-function updateStatistics() {
-
-    const orders =
-        Number(
-            localStorage.getItem(
-                "fxnzzOrders"
-            )
-        ) || 0;
-
-
-    const testimonials =
-        JSON.parse(
-            localStorage.getItem(
-                "fxnzzTestimonials"
-            )
-        ) || [];
-
-
-    document.getElementById(
-        "total-orders"
-    ).innerText = orders;
-
-
-    document.getElementById(
-        "hero-orders"
-    ).innerText = orders;
-
-
-    document.getElementById(
-        "total-testimonials"
-    ).innerText =
-        testimonials.length;
-
-
-    document.getElementById(
-        "hero-testimonials"
-    ).innerText =
-        testimonials.length;
-
-}
-
-
-// ==========================================
-// RATING
-// ==========================================
-
-function setRating(rating) {
-
-    selectedRating = rating;
-
-
-    const stars =
-        document.querySelectorAll(
-            "#star-input button"
-        );
-
-
-    stars.forEach(
-        (star, index) => {
-
-            if (index < rating) {
-
-                star.classList.add(
-                    "selected"
-                );
-
-            } else {
-
-                star.classList.remove(
-                    "selected"
-                );
-
-            }
-
-        }
-    );
-
-}
-
-
-// ==========================================
-// IMAGE PREVIEW
-// ==========================================
-
-function previewImage(event) {
-
-    const file =
-        event.target.files[0];
-
-
-    if (!file) {
-
-        return;
-
-    }
-
-
-    const reader =
-        new FileReader();
-
-
-    reader.onload =
-        function(e) {
-
-            previewImageData =
-                e.target.result;
-
-
-            document.getElementById(
-                "image-preview"
-            ).innerHTML = `
-
-                <img
-                    src="${previewImageData}"
-                    alt="Preview hasil joki">
-
-            `;
-
-        };
-
-
-    reader.readAsDataURL(file);
-
-}
-
-
-// ==========================================
-// SUBMIT TESTIMONIAL
-// ==========================================
-
-function submitReview() {
-
-    const name =
-        document.getElementById(
-            "review-name"
-        ).value.trim();
-
-
-    const comment =
-        document.getElementById(
-            "review-comment"
-        ).value.trim();
-
-
-    if (!name) {
-
-        alert(
-            "Masukkan nama atau username."
-        );
-
-        return;
-
-    }
-
-
-    if (!comment) {
-
-        alert(
-            "Tulis pengalaman terlebih dahulu."
-        );
-
-        return;
-
-    }
-
-
-    if (selectedRating === 0) {
-
-        alert(
-            "Berikan rating terlebih dahulu."
-        );
-
-        return;
-
-    }
-
-
-    const testimonial = {
-
-        name: name,
-
-        comment: comment,
-
-        rating: selectedRating,
-
-        image: previewImageData,
-
-        date:
-            new Date()
-                .toLocaleDateString(
-                    "id-ID"
-                )
-
-    };
-
-
-    const testimonials =
-        JSON.parse(
-            localStorage.getItem(
-                "fxnzzTestimonials"
-            )
-        ) || [];
-
-
-    testimonials.unshift(
-        testimonial
-    );
-
-
-    localStorage.setItem(
-
-        "fxnzzTestimonials",
-
-        JSON.stringify(
-            testimonials
-        )
-
-    );
-
-
-    alert(
-        "Testimoni berhasil ditambahkan."
-    );
-
-
-    document.getElementById(
-        "review-name"
-    ).value = "";
-
-
-    document.getElementById(
-        "review-comment"
-    ).value = "";
-
-
-    document.getElementById(
-        "review-image"
-    ).value = "";
-
-
-    document.getElementById(
-        "image-preview"
-    ).innerHTML = "";
-
-
-    selectedRating = 0;
-
-    previewImageData = null;
-
-
-    setRating(0);
-
-
-    displayTestimonials();
-
-    updateStatistics();
-
-}
-
-
-// ==========================================
-// DISPLAY TESTIMONIAL
-// ==========================================
-
-function displayTestimonials() {
-
-    const container =
-        document.getElementById(
-            "testimonial-list"
-        );
-
-
-    const testimonials =
-        JSON.parse(
-            localStorage.getItem(
-                "fxnzzTestimonials"
-            )
-        ) || [];
-
-
-    container.innerHTML = "";
-
-
-    if (testimonials.length === 0) {
-
-        container.innerHTML = `
-
-            <div class="empty-cart">
-
-                <p>
-                    Belum ada testimoni.
-                </p>
-
-                <small>
-                    Jadilah pelanggan pertama
-                    yang memberikan testimoni.
-                </small>
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    testimonials.forEach(item => {
-
-        const card =
-            document.createElement(
-                "div"
-            );
-
-
-        card.className =
-            "testimonial-card";
-
-
-        let stars = "";
-
-
-        for (
-            let i = 0;
-            i < item.rating;
-            i++
-        ) {
-
-            stars += "★";
-
-        }
-
-
-        const imageHTML =
-            item.image
-                ? `
-                    <img
-                        src="${item.image}"
-                        alt="Hasil joki">
-                  `
-                : "";
-
-
-        card.innerHTML = `
-
-            ${imageHTML}
-
-            <div class="testimonial-content">
-
-                <div class="testimonial-top">
-
-                    <span class="testimonial-name">
-                        ${item.name}
-                    </span>
-
-                    <span class="stars">
-                        ${stars}
-                    </span>
-
-                </div>
-
-
-                <p>
-                    "${item.comment}"
-                </p>
-
-
-                <small>
-                    ${item.date}
-                </small>
-
-            </div>
-
-        `;
-
-
-        container.appendChild(card);
-
-    });
-
-}
-
-
-// ==========================================
-// COMMENTS
-// ==========================================
-
-function submitComment() {
-
-    const name =
-        document.getElementById(
-            "comment-name"
-        ).value.trim();
-
-
-    const text =
-        document.getElementById(
-            "comment-text"
-        ).value.trim();
-
-
-    if (!name || !text) {
-
-        alert(
-            "Isi nama dan komentar terlebih dahulu."
-        );
-
-        return;
-
-    }
-
-
-    const comment = {
-
-        name: name,
-
-        text: text,
-
-        date:
-            new Date()
-                .toLocaleDateString(
-                    "id-ID"
-                )
-
-    };
-
-
-    const comments =
-        JSON.parse(
-            localStorage.getItem(
-                "fxnzzComments"
-            )
-        ) || [];
-
-
-    comments.unshift(
-        comment
-    );
-
-
-    localStorage.setItem(
-
-        "fxnzzComments",
-
-        JSON.stringify(
-            comments
-        )
-
-    );
-
-
-    document.getElementById(
-        "comment-name"
-    ).value = "";
-
-
-    document.getElementById(
-        "comment-text"
-    ).value = "";
-
-
-    displayComments();
-
-}
-
-
-function displayComments() {
-
-    const container =
-        document.getElementById(
-            "comment-list"
-        );
-
-
-    const comments =
-        JSON.parse(
-            localStorage.getItem(
-                "fxnzzComments"
-            )
-        ) || [];
-
-
-    container.innerHTML = "";
-
-
-    if (comments.length === 0) {
-
-        container.innerHTML = `
-
-            <div class="empty-cart">
-
-                <p>
-                    Belum ada komentar.
-                </p>
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    comments.forEach(item => {
-
-        const card =
-            document.createElement(
-                "div"
-            );
-
-
-        card.className =
-            "comment-card";
-
-
-        card.innerHTML = `
-
-            <strong>
-                ${item.name}
-            </strong>
-
-            <p>
-                ${item.text}
-            </p>
-
-            <small>
-                ${item.date}
-            </small>
-
-        `;
-
-
-        container.appendChild(card);
-
-    });
-
-}
-
-
-// ==========================================
-// NAVIGATION
-// ==========================================
-
-function scrollToServices() {
-
-    document
-        .getElementById("services")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
-}
-
-
-function scrollToOrder() {
-
-    document
-        .getElementById("order")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
-}
-
-
-function scrollToTestimonials() {
-
-    document
-        .getElementById("testimonials")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-
-}
-
-
-// ==========================================
-// WHATSAPP
-// ==========================================
-
-function contactWhatsApp() {
-
-    // GANTI NOMOR WHATSAPP
-    const phone =
-        "6285850654348";
-
-
-    window.open(
-
-        `https://wa.me/${phone}`,
-
-        "_blank"
-
-    );
-
-}
-
-
-// ==========================================
-// INITIALIZE
-// ==========================================
-
-displayPackages();
-
-displayTestimonials();
-
-displayComments();
-
-updateCart();
-
-updateStatistics();
+    e.target.reset();
+    $("#photoPreview").textContent="Preview foto";
+    toast("Testimoni berhasil dikirim.");
+  }catch(error){
+    console.error(error);
+    toast("Gagal mengirim testimoni ke database.");
+  }
+};
+  if(file){const reader=new FileReader();reader.onload=()=>saveTest(reader.result);reader.readAsDataURL(file)}else saveTest("");
+});
+
+$("#commentForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const data=load("fxnzz_comments",[]);
+  data.push({name:$("#cName").value.trim(),text:$("#cText").value.trim(),date:new Date().toLocaleDateString("id-ID")});
+  save("fxnzz_comments",data);e.target.reset();renderComments();toast("Komentar tersimpan di browser.");
+});
+
+$("#copyWa").onclick=async()=>{
+  try{await navigator.clipboard.writeText(WA_NUMBER);toast("Nomor WhatsApp berhasil disalin.")}catch{toast("Clipboard tidak tersedia di browser ini.")}
+};
+
+$("#backTop").onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+window.addEventListener("scroll",()=>$("#backTop").classList.toggle("show",scrollY>500));
+
+window.addEventListener("load",()=>{
+  state.cart=load("fxnzz_cart",[]);
+  renderPackages();renderCart();renderTestimonials();renderComments();updateStats();
+  setStoreStatus();startCountdown();setupReveal();setupActiveNav();
+});
 
 </script>
-
+document.addEventListener('click', function() {
+        var audio = document.getElementById('bgmusic');
+        audio.play();
+      }, { once: true });
+</script>
 
 </body>
 </html>
